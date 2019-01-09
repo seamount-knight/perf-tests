@@ -130,6 +130,8 @@ func GetMasterName(c clientset.Interface) (string, error) {
 	for i := range nodeList {
 		if system.IsMasterNode(nodeList[i].Name) {
 			return nodeList[i].Name, nil
+		} else if role, ok := nodeList[i].Labels["kubernetes.io/role"]; ok && system.IsMasterNode(role) {
+			return nodeList[i].Name, nil
 		}
 	}
 	return "", fmt.Errorf("master node not found")
