@@ -201,11 +201,6 @@ func (d *timeoutDialer) Dial(network, addr string, config *ssh.ClientConfig) (*s
 // host as specific user, along with any SSH-level error.
 // If user=="", it will default (like SSH) to os.Getenv("USER")
 func RunSSHCommand(cmd, user, host string, signer ssh.Signer) (string, string, int, error) {
-	return runSSHCommand(realTimeoutDialer, cmd, user, host, signer, true)
-}
-
-// Internal implementation of runSSHCommand, for testing
-func runSSHCommand(dialer sshDialer, cmd, user, host string, signer ssh.Signer, retry bool) (string, string, int, error) {
 	if user == "" {
 		user = os.Getenv("USER")
 	}
@@ -215,6 +210,34 @@ func runSSHCommand(dialer sshDialer, cmd, user, host string, signer ssh.Signer, 
 		Auth:            []ssh.AuthMethod{ssh.PublicKeys(signer)},
 		HostKeyCallback: ssh.InsecureIgnoreHostKey(),
 	}
+
+	return runSSHCommand(realTimeoutDialer, cmd, user, host, config, true)
+}
+
+func RunSSHCommandWithPass(cmd, user, host, pass string) (string, string, int, error) {
+	if user == "" {
+		user = os.Getenv("USER")
+	}
+	// Setup the config, dial the server, and open a session.
+	config := &ssh.ClientConfig{
+		User:            user,
+		Auth:            []ssh.AuthMethod{ssh.Password(pass)},
+		HostKeyCallback: ssh.InsecureIgnoreHostKey(),
+	}
+	return runSSHCommand(realTimeoutDialer, cmd, user, host, config, true)
+}
+
+// Internal implementation of runSSHCommand, for testing
+func runSSHCommand(dialer sshDialer, cmd, user, host string, config *ssh.ClientConfig, retry bool) (string, string, int, error) {
+	if user == "" {
+		user = os.Getenv("USER")
+	}
+	//// Setup the config, dial the server, and open a session.
+	//config := &ssh.ClientConfig{
+	//	User:            user,
+	//	Auth:            []ssh.AuthMethod{ssh.PublicKeys(signer)},
+	//	HostKeyCallback: ssh.InsecureIgnoreHostKey(),
+	//}
 	client, err := dialer.Dial("tcp", host, config)
 	if err != nil && retry {
 		err = wait.Poll(5*time.Second, 20*time.Second, func() (bool, error) {

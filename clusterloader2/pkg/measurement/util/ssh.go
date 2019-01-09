@@ -49,11 +49,21 @@ type SSHResult struct {
 func SSH(cmd, host, provider string) (SSHResult, error) {
 	result := SSHResult{Host: host, Cmd: cmd}
 
-	// Get a signer for the provider.
-	signer, err := getSigner(provider)
-	if err != nil {
-		return result, fmt.Errorf("error getting signer for provider %s: '%v'", provider, err)
+	var signer ssh.Signer
+	var err error
+	sshPass := os.Getenv("MasterSSHPass")
+	if sshPass == "" {
+		// Get a signer for the provider.
+		signer, err = getSigner(provider)
+		if err != nil {
+			return result, fmt.Errorf("error getting signer for provider %s: '%v'", provider, err)
+		}
 	}
+	//// Get a signer for the provider.
+	//signer, err := getSigner(provider)
+	//if err != nil {
+	//	return result, fmt.Errorf("error getting signer for provider %s: '%v'", provider, err)
+	//}
 
 	// RunSSHCommand will default to Getenv("USER") if user == "", but we're
 	// defaulting here as well for logging clarity.
@@ -62,11 +72,17 @@ func SSH(cmd, host, provider string) (SSHResult, error) {
 		result.User = os.Getenv("USER")
 	}
 
-	stdout, stderr, code, err := sshutil.RunSSHCommand(cmd, result.User, host, signer)
+	var stdout, stderr string
+	var code int
+
+	if sshPass != "" {
+		stdout, stderr, code, err = sshutil.RunSSHCommandWithPass(cmd, result.User, host, sshPass)
+	} else {
+		stdout, stderr, code, err = sshutil.RunSSHCommand(cmd, result.User, host, signer)
+	}
 	result.Stdout = stdout
 	result.Stderr = stderr
 	result.Code = code
-
 	return result, err
 }
 
@@ -109,6 +125,5 @@ func getSigner(provider string) (ssh.Signer, error) {
 	if len(key) == 0 {
 		key = filepath.Join(keydir, keyfile)
 	}
-
 	return sshutil.MakePrivateKeySignerFromFile(key)
 }
