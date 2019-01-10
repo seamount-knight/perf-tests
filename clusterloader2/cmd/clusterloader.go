@@ -152,14 +152,13 @@ func printTestResult(name, status, errors string) {
 func main() {
 	//defer glog.Flush()
 	initFlags()
-	glog.Infoln("---------------------start")
 	if err := flags.Parse(); err != nil {
 		glog.Fatalf("Flag parse failed: %v", err)
 	}
 	if errList := validateFlags(); !errList.IsEmpty() {
 		glog.Fatalf("Parsing flags error: %v", errList.String())
 	}
-
+	glog.Infoln("---------------------start")
 	mclient, err := framework.NewMultiClientSet(clusterLoaderConfig.ClusterConfig.KubeConfigPath, 1)
 	if err != nil {
 		glog.Fatalf("Client creation error: %v", err)

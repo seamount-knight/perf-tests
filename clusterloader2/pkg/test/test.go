@@ -62,7 +62,8 @@ func RunTest(f *framework.Framework, clusterLoaderConfig *config.ClusterLoaderCo
 	mapping["Nodes"] = clusterLoaderConfig.ClusterConfig.Nodes
 	testConfig, err := ctx.GetTemplateProvider().TemplateToConfig(testConfigFilename, mapping)
 	fmt.Printf("step len: %d\n\n", len(testConfig.Steps))
-	glog.Infoln("------------------------------------------")
+	glog.Infoln("1111------------------------------------")
+	glog.Infof("------------------------------------------\n")
 	//for index, step := range testConfig.Steps {
 	//	fmt.Printf("index: %d, name: %v\n", index, step.Name)
 	//	fmt.Printf("measu: %d\n", len(step.Measurements))
