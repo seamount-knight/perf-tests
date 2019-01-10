@@ -39,10 +39,6 @@ tuningSets:
     # as each RC changes its size from X to a uniform random value in [X/2, 3X/2].
     # To match 10 [pods/s] requirement, we need to divide saturationTime by 4.
     timeLimit: {{DivideInt $saturationTime 4}}s
-- name: QPS
-  qpsLoad:
-    qps: 100
-
 {{if $ENABLE_CHAOSMONKEY}}
 chaosMonkey:
   nodeFailure:
@@ -62,33 +58,33 @@ steps:
     Params:
       action: start
       nodeMode: {{$NODE_MODE}}
-## Create SVCs
-#- phases:
-#  - namespaceRange:
-#      min: 1
-#      max: {{$namespaces}}
-#    replicasPerNamespace: {{DivideInt (AddInt $bigRcsPerNamespace 1) 2}}
-#    tuningSet: Sequence
-#    objectBundle:
-#    - basename: big-service
-#      objectTemplatePath: service.yaml
-#  - namespaceRange:
-#      min: 1
-#      max: {{$namespaces}}
-#    replicasPerNamespace: {{DivideInt (AddInt $mediumRcsPerNamespace 1) 2}}
-#    tuningSet: Sequence
-#    objectBundle:
-#    - basename: medium-service
-#      objectTemplatePath: service.yaml
-#  - namespaceRange:
-#      min: 1
-#      max: {{$namespaces}}
-#    replicasPerNamespace: {{DivideInt (AddInt $smallRcsPerNamespace 1) 2}}
-#    tuningSet: Sequence
-#    objectBundle:
-#    - basename: small-service
-#      objectTemplatePath: service.yaml
-#- name: Creating SVCs
+# Create SVCs
+- phases:
+  - namespaceRange:
+      min: 1
+      max: {{$namespaces}}
+    replicasPerNamespace: {{DivideInt (AddInt $bigRcsPerNamespace 1) 2}}
+    tuningSet: Sequence
+    objectBundle:
+    - basename: big-service
+      objectTemplatePath: service.yaml
+  - namespaceRange:
+      min: 1
+      max: {{$namespaces}}
+    replicasPerNamespace: {{DivideInt (AddInt $mediumRcsPerNamespace 1) 2}}
+    tuningSet: Sequence
+    objectBundle:
+    - basename: medium-service
+      objectTemplatePath: service.yaml
+  - namespaceRange:
+      min: 1
+      max: {{$namespaces}}
+    replicasPerNamespace: {{DivideInt (AddInt $smallRcsPerNamespace 1) 2}}
+    tuningSet: Sequence
+    objectBundle:
+    - basename: small-service
+      objectTemplatePath: service.yaml
+- name: Creating SVCs
 # Create RCs
 - measurements:
   - Identifier: WaitForRunningRCs
@@ -220,33 +216,33 @@ steps:
     Method: WaitForControlledPodsRunning
     Params:
       action: gather
-## Delete SVCs
-#- phases:
-#  - namespaceRange:
-#      min: 1
-#      max: {{$namespaces}}
-#    replicasPerNamespace: 0
-#    tuningSet: Sequence
-#    objectBundle:
-#    - basename: big-service
-#      objectTemplatePath: service.yaml
-#  - namespaceRange:
-#      min: 1
-#      max: {{$namespaces}}
-#    replicasPerNamespace: 0
-#    tuningSet: Sequence
-#    objectBundle:
-#    - basename: medium-service
-#      objectTemplatePath: service.yaml
-#  - namespaceRange:
-#      min: 1
-#      max: {{$namespaces}}
-#    replicasPerNamespace: 0
-#    tuningSet: Sequence
-#    objectBundle:
-#    - basename: small-service
-#      objectTemplatePath: service.yaml
-#- name: Deleting SVCs
+# Delete SVCs
+- phases:
+  - namespaceRange:
+      min: 1
+      max: {{$namespaces}}
+    replicasPerNamespace: 0
+    tuningSet: Sequence
+    objectBundle:
+    - basename: big-service
+      objectTemplatePath: service.yaml
+  - namespaceRange:
+      min: 1
+      max: {{$namespaces}}
+    replicasPerNamespace: 0
+    tuningSet: Sequence
+    objectBundle:
+    - basename: medium-service
+      objectTemplatePath: service.yaml
+  - namespaceRange:
+      min: 1
+      max: {{$namespaces}}
+    replicasPerNamespace: 0
+    tuningSet: Sequence
+    objectBundle:
+    - basename: small-service
+      objectTemplatePath: service.yaml
+- name: Deleting SVCs
 # Collect measurements
 - measurements:
   - Identifier: APIResponsiveness

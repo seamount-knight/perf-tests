@@ -34,3 +34,7 @@ spec:
         operator: "Exists"
         effect: "NoExecute"
         tolerationSeconds: 900
+      - key: "k8s.kubernetes.io/role"
+        value: "hollow-node"
+        effect: "NoSchedule"
+
