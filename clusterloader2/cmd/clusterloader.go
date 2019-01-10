@@ -158,7 +158,6 @@ func main() {
 	if errList := validateFlags(); !errList.IsEmpty() {
 		glog.Fatalf("Parsing flags error: %v", errList.String())
 	}
-	glog.Infoln("---------------------start")
 	mclient, err := framework.NewMultiClientSet(clusterLoaderConfig.ClusterConfig.KubeConfigPath, 1)
 	if err != nil {
 		glog.Fatalf("Client creation error: %v", err)

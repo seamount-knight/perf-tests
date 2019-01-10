@@ -39,6 +39,10 @@ tuningSets:
     # as each RC changes its size from X to a uniform random value in [X/2, 3X/2].
     # To match 10 [pods/s] requirement, we need to divide saturationTime by 4.
     timeLimit: {{DivideInt $saturationTime 4}}s
+- name: QPS
+  qpsLoad:
+    qps: 100
+
 {{if $ENABLE_CHAOSMONKEY}}
 chaosMonkey:
   nodeFailure:
@@ -58,188 +62,191 @@ steps:
     Params:
       action: start
       nodeMode: {{$NODE_MODE}}
-# Create SVCs
+## Create SVCs
+#- phases:
+#  - namespaceRange:
+#      min: 1
+#      max: {{$namespaces}}
+#    replicasPerNamespace: {{DivideInt (AddInt $bigRcsPerNamespace 1) 2}}
+#    tuningSet: Sequence
+#    objectBundle:
+#    - basename: big-service
+#      objectTemplatePath: service.yaml
+#  - namespaceRange:
+#      min: 1
+#      max: {{$namespaces}}
+#    replicasPerNamespace: {{DivideInt (AddInt $mediumRcsPerNamespace 1) 2}}
+#    tuningSet: Sequence
+#    objectBundle:
+#    - basename: medium-service
+#      objectTemplatePath: service.yaml
+#  - namespaceRange:
+#      min: 1
+#      max: {{$namespaces}}
+#    replicasPerNamespace: {{DivideInt (AddInt $smallRcsPerNamespace 1) 2}}
+#    tuningSet: Sequence
+#    objectBundle:
+#    - basename: small-service
+#      objectTemplatePath: service.yaml
+#- name: Creating SVCs
+# Create RCs
+- measurements:
+  - Identifier: WaitForRunningRCs
+    Method: WaitForControlledPodsRunning
+    Params:
+      action: start
+      kind: ReplicationController
+      labelSelector: group = load
+      operationTimeout: 15m
 - phases:
   - namespaceRange:
       min: 1
       max: {{$namespaces}}
-    replicasPerNamespace: {{DivideInt (AddInt $bigRcsPerNamespace 1) 2}}
-    tuningSet: Sequence
+    replicasPerNamespace: {{$bigRcsPerNamespace}}
+#    tuningSet: RandomizedSaturationTimeLimited
+    tuningSet: QPS
     objectBundle:
-    - basename: big-service
-      objectTemplatePath: service.yaml
+    - basename: big-rc
+      objectTemplatePath: rc.yaml
+      templateFillMap:
+        ReplicasMin: {{$BIG_GROUP_SIZE}}
+        ReplicasMax: {{$BIG_GROUP_SIZE}}
+        SvcName: big-service
   - namespaceRange:
       min: 1
       max: {{$namespaces}}
-    replicasPerNamespace: {{DivideInt (AddInt $mediumRcsPerNamespace 1) 2}}
-    tuningSet: Sequence
+    replicasPerNamespace: {{$mediumRcsPerNamespace}}
+#    tuningSet: RandomizedSaturationTimeLimited
+    tuningSet: QPS
     objectBundle:
-    - basename: medium-service
-      objectTemplatePath: service.yaml
+    - basename: medium-rc
+      objectTemplatePath: rc.yaml
+      templateFillMap:
+        ReplicasMin: {{$MEDIUM_GROUP_SIZE}}
+        ReplicasMax: {{$MEDIUM_GROUP_SIZE}}
+        SvcName: medium-service
   - namespaceRange:
       min: 1
       max: {{$namespaces}}
-    replicasPerNamespace: {{DivideInt (AddInt $smallRcsPerNamespace 1) 2}}
-    tuningSet: Sequence
+    replicasPerNamespace: {{$smallRcsPerNamespace}}
+#    tuningSet: RandomizedSaturationTimeLimited
+    tuningSet: QPS
     objectBundle:
-    - basename: small-service
-      objectTemplatePath: service.yaml
-- name: Creating SVCs
-## Create RCs
-#- measurements:
-#  - Identifier: WaitForRunningRCs
-#    Method: WaitForControlledPodsRunning
-#    Params:
-#      action: start
-#      kind: ReplicationController
-#      labelSelector: group = load
-#      operationTimeout: 15m
-#- phases:
-#  - namespaceRange:
-#      min: 1
-#      max: {{$namespaces}}
-#    replicasPerNamespace: {{$bigRcsPerNamespace}}
-#    tuningSet: RandomizedSaturationTimeLimited
-#    objectBundle:
-#    - basename: big-rc
-#      objectTemplatePath: rc.yaml
-#      templateFillMap:
-#        ReplicasMin: {{$BIG_GROUP_SIZE}}
-#        ReplicasMax: {{$BIG_GROUP_SIZE}}
-#        SvcName: big-service
-#  - namespaceRange:
-#      min: 1
-#      max: {{$namespaces}}
-#    replicasPerNamespace: {{$mediumRcsPerNamespace}}
-#    tuningSet: RandomizedSaturationTimeLimited
-#    objectBundle:
-#    - basename: medium-rc
-#      objectTemplatePath: rc.yaml
-#      templateFillMap:
-#        ReplicasMin: {{$MEDIUM_GROUP_SIZE}}
-#        ReplicasMax: {{$MEDIUM_GROUP_SIZE}}
-#        SvcName: medium-service
-#  - namespaceRange:
-#      min: 1
-#      max: {{$namespaces}}
-#    replicasPerNamespace: {{$smallRcsPerNamespace}}
-#    tuningSet: RandomizedSaturationTimeLimited
-#    objectBundle:
-#    - basename: small-rc
-#      objectTemplatePath: rc.yaml
-#      templateFillMap:
-#        ReplicasMin: {{$SMALL_GROUP_SIZE}}
-#        ReplicasMax: {{$SMALL_GROUP_SIZE}}
-#        SvcName: small-service
-#- measurements:
-#  - Identifier: WaitForRunningRCs
-#    Method: WaitForControlledPodsRunning
-#    Params:
-#      action: gather
-#- name: Creating RCs
-## Scale RCs
-#- phases:
-#  - namespaceRange:
-#      min: 1
-#      max: {{$namespaces}}
-#    replicasPerNamespace: {{$bigRcsPerNamespace}}
-#    tuningSet: RandomizedScalingTimeLimited
-#    objectBundle:
-#    - basename: big-rc
-#      objectTemplatePath: rc.yaml
-#      templateFillMap:
-#        ReplicasMin: {{MultiplyInt $BIG_GROUP_SIZE 0.5}}
-#        ReplicasMax: {{MultiplyInt $BIG_GROUP_SIZE 1.5}}
-#        SvcName: big-service
-#  - namespaceRange:
-#      min: 1
-#      max: {{$namespaces}}
-#    replicasPerNamespace: {{$mediumRcsPerNamespace}}
-#    tuningSet: RandomizedScalingTimeLimited
-#    objectBundle:
-#    - basename: medium-rc
-#      objectTemplatePath: rc.yaml
-#      templateFillMap:
-#        ReplicasMin: {{MultiplyInt $MEDIUM_GROUP_SIZE 0.5}}
-#        ReplicasMax: {{MultiplyInt $MEDIUM_GROUP_SIZE 1.5}}
-#        SvcName: medium-service
-#  - namespaceRange:
-#      min: 1
-#      max: {{$namespaces}}
-#    replicasPerNamespace: {{$smallRcsPerNamespace}}
-#    tuningSet: RandomizedScalingTimeLimited
-#    objectBundle:
-#    - basename: small-rc
-#      objectTemplatePath: rc.yaml
-#      templateFillMap:
-#        ReplicasMin: {{MultiplyInt $SMALL_GROUP_SIZE 0.5}}
-#        ReplicasMax: {{MultiplyInt $SMALL_GROUP_SIZE 1.5}}
-#        SvcName: small-service
-#- measurements:
-#  - Identifier: WaitForRunningRCs
-#    Method: WaitForControlledPodsRunning
-#    Params:
-#      action: gather
-#- name: Scaling RCs
-## Delete RCs
-#- phases:
-#  - namespaceRange:
-#      min: 1
-#      max: {{$namespaces}}
-#    replicasPerNamespace: 0
-#    tuningSet: RandomizedSaturationTimeLimited
-#    objectBundle:
-#    - basename: big-rc
-#      objectTemplatePath: rc.yaml
-#  - namespaceRange:
-#      min: 1
-#      max: {{$namespaces}}
-#    replicasPerNamespace: 0
-#    tuningSet: RandomizedSaturationTimeLimited
-#    objectBundle:
-#    - basename: medium-rc
-#      objectTemplatePath: rc.yaml
-#  - namespaceRange:
-#      min: 1
-#      max: {{$namespaces}}
-#    replicasPerNamespace: 0
-#    tuningSet: RandomizedSaturationTimeLimited
-#    objectBundle:
-#    - basename: small-rc
-#      objectTemplatePath: rc.yaml
-#- name: Deleting RCs
-#- measurements:
-#  - Identifier: WaitForRunningRCs
-#    Method: WaitForControlledPodsRunning
-#    Params:
-#      action: gather
-# Delete SVCs
+    - basename: small-rc
+      objectTemplatePath: rc.yaml
+      templateFillMap:
+        ReplicasMin: {{$SMALL_GROUP_SIZE}}
+        ReplicasMax: {{$SMALL_GROUP_SIZE}}
+        SvcName: small-service
+- measurements:
+  - Identifier: WaitForRunningRCs
+    Method: WaitForControlledPodsRunning
+    Params:
+      action: gather
+- name: Creating RCs
+# Scale RCs
+- phases:
+  - namespaceRange:
+      min: 1
+      max: {{$namespaces}}
+    replicasPerNamespace: {{$bigRcsPerNamespace}}
+    tuningSet: RandomizedScalingTimeLimited
+    objectBundle:
+    - basename: big-rc
+      objectTemplatePath: rc.yaml
+      templateFillMap:
+        ReplicasMin: {{MultiplyInt $BIG_GROUP_SIZE 0.5}}
+        ReplicasMax: {{MultiplyInt $BIG_GROUP_SIZE 1.5}}
+        SvcName: big-service
+  - namespaceRange:
+      min: 1
+      max: {{$namespaces}}
+    replicasPerNamespace: {{$mediumRcsPerNamespace}}
+    tuningSet: RandomizedScalingTimeLimited
+    objectBundle:
+    - basename: medium-rc
+      objectTemplatePath: rc.yaml
+      templateFillMap:
+        ReplicasMin: {{MultiplyInt $MEDIUM_GROUP_SIZE 0.5}}
+        ReplicasMax: {{MultiplyInt $MEDIUM_GROUP_SIZE 1.5}}
+        SvcName: medium-service
+  - namespaceRange:
+      min: 1
+      max: {{$namespaces}}
+    replicasPerNamespace: {{$smallRcsPerNamespace}}
+    tuningSet: RandomizedScalingTimeLimited
+    objectBundle:
+    - basename: small-rc
+      objectTemplatePath: rc.yaml
+      templateFillMap:
+        ReplicasMin: {{MultiplyInt $SMALL_GROUP_SIZE 0.5}}
+        ReplicasMax: {{MultiplyInt $SMALL_GROUP_SIZE 1.5}}
+        SvcName: small-service
+- measurements:
+  - Identifier: WaitForRunningRCs
+    Method: WaitForControlledPodsRunning
+    Params:
+      action: gather
+- name: Scaling RCs
+# Delete RCs
 - phases:
   - namespaceRange:
       min: 1
       max: {{$namespaces}}
     replicasPerNamespace: 0
-    tuningSet: Sequence
+    tuningSet: RandomizedSaturationTimeLimited
     objectBundle:
-    - basename: big-service
-      objectTemplatePath: service.yaml
+    - basename: big-rc
+      objectTemplatePath: rc.yaml
   - namespaceRange:
       min: 1
       max: {{$namespaces}}
     replicasPerNamespace: 0
-    tuningSet: Sequence
+    tuningSet: RandomizedSaturationTimeLimited
     objectBundle:
-    - basename: medium-service
-      objectTemplatePath: service.yaml
+    - basename: medium-rc
+      objectTemplatePath: rc.yaml
   - namespaceRange:
       min: 1
       max: {{$namespaces}}
     replicasPerNamespace: 0
-    tuningSet: Sequence
+    tuningSet: RandomizedSaturationTimeLimited
     objectBundle:
-    - basename: small-service
-      objectTemplatePath: service.yaml
-- name: Deleting SVCs
+    - basename: small-rc
+      objectTemplatePath: rc.yaml
+- name: Deleting RCs
+- measurements:
+  - Identifier: WaitForRunningRCs
+    Method: WaitForControlledPodsRunning
+    Params:
+      action: gather
+## Delete SVCs
+#- phases:
+#  - namespaceRange:
+#      min: 1
+#      max: {{$namespaces}}
+#    replicasPerNamespace: 0
+#    tuningSet: Sequence
+#    objectBundle:
+#    - basename: big-service
+#      objectTemplatePath: service.yaml
+#  - namespaceRange:
+#      min: 1
+#      max: {{$namespaces}}
+#    replicasPerNamespace: 0
+#    tuningSet: Sequence
+#    objectBundle:
+#    - basename: medium-service
+#      objectTemplatePath: service.yaml
+#  - namespaceRange:
+#      min: 1
+#      max: {{$namespaces}}
+#    replicasPerNamespace: 0
+#    tuningSet: Sequence
+#    objectBundle:
+#    - basename: small-service
+#      objectTemplatePath: service.yaml
+#- name: Deleting SVCs
 # Collect measurements
 - measurements:
   - Identifier: APIResponsiveness
