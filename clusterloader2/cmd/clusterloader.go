@@ -150,8 +150,9 @@ func printTestResult(name, status, errors string) {
 }
 
 func main() {
-	defer glog.Flush()
+	//defer glog.Flush()
 	initFlags()
+	glog.Infoln("---------------------start")
 	if err := flags.Parse(); err != nil {
 		glog.Fatalf("Flag parse failed: %v", err)
 	}
