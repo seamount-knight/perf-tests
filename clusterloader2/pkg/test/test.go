@@ -18,6 +18,7 @@ package test
 
 import (
 	"fmt"
+	"github.com/golang/glog"
 	"path/filepath"
 
 	"k8s.io/perf-tests/clusterloader2/pkg/config"
@@ -61,21 +62,22 @@ func RunTest(f *framework.Framework, clusterLoaderConfig *config.ClusterLoaderCo
 	mapping["Nodes"] = clusterLoaderConfig.ClusterConfig.Nodes
 	testConfig, err := ctx.GetTemplateProvider().TemplateToConfig(testConfigFilename, mapping)
 	fmt.Printf("step len: %d\n\n", len(testConfig.Steps))
-	for index, step := range testConfig.Steps {
-		fmt.Printf("index: %d, name: %v\n", index, step.Name)
-		fmt.Printf("measu: %d\n", len(step.Measurements))
-		for _, m := range step.Measurements {
-			fmt.Println(m.Identifier, m.Method, m.Params)
-		}
-		fmt.Printf("phases: %d\n", len(step.Phases))
-		for _, p := range step.Phases {
-			fmt.Println(p.TuningSet, p.NamespaceRange, p.ObjectBundle)
-		}
-		fmt.Println("------------------------------------------\n")
-	}
-	return nil
-	//if err != nil {
-	//	return errors.NewErrorList(fmt.Errorf("config reading error: %v", err))
+	glog.Infoln("------------------------------------------")
+	//for index, step := range testConfig.Steps {
+	//	fmt.Printf("index: %d, name: %v\n", index, step.Name)
+	//	fmt.Printf("measu: %d\n", len(step.Measurements))
+	//	for _, m := range step.Measurements {
+	//		fmt.Println(m.Identifier, m.Method, m.Params)
+	//	}
+	//	fmt.Printf("phases: %d\n", len(step.Phases))
+	//	for _, p := range step.Phases {
+	//		fmt.Println(p.TuningSet, p.NamespaceRange, p.ObjectBundle)
+	//	}
+	//	fmt.Println("------------------------------------------\n")
 	//}
-	//return Test.ExecuteTest(ctx, testConfig)
+	//return nil
+	if err != nil {
+		return errors.NewErrorList(fmt.Errorf("config reading error: %v", err))
+	}
+	return Test.ExecuteTest(ctx, testConfig)
 }
