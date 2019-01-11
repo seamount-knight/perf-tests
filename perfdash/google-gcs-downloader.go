@@ -49,6 +49,8 @@ func (g *GoogleGCSDownloader) getData() (JobToCategoryData, error) {
 	} else {
 		fmt.Fprintf(os.Stderr, "Failed to refresh config: %v", err)
 	}
+	fmt.Printf("---------newJobs: %v\n", newJobs)
+
 	fmt.Print("Getting Data from GCS...\n")
 	result := make(JobToCategoryData)
 	var resultLock sync.Mutex

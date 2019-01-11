@@ -174,46 +174,46 @@ var (
 		},
 	}
 
-	// benchmarkDescriptions contains metrics exported by test/integration/scheduler_perf
-	benchmarkDescriptions = TestDescriptions{
-		"Scheduler": {
-			"BenchmarkResults": []TestDescription{{
-				Name:             "benchmark",
-				OutputFilePrefix: "BenchmarkResults",
-				Parser:           parseResponsivenessData,
-			}},
-		},
-	}
+	//// benchmarkDescriptions contains metrics exported by test/integration/scheduler_perf
+	//benchmarkDescriptions = TestDescriptions{
+	//	"Scheduler": {
+	//		"BenchmarkResults": []TestDescription{{
+	//			Name:             "benchmark",
+	//			OutputFilePrefix: "BenchmarkResults",
+	//			Parser:           parseResponsivenessData,
+	//		}},
+	//	},
+	//}
 
-	dnsBenchmarkDescriptions = TestDescriptions{
-		"dns": {
-			"Latency": []TestDescription{{
-				Name:             "dns",
-				OutputFilePrefix: "Latency",
-				Parser:           parseResponsivenessData,
-			}},
-			"LatencyPerc": []TestDescription{{
-				Name:             "dns",
-				OutputFilePrefix: "LatencyPerc",
-				Parser:           parseResponsivenessData,
-			}},
-			"Queries": []TestDescription{{
-				Name:             "dns",
-				OutputFilePrefix: "Queries",
-				Parser:           parseResponsivenessData,
-			}},
-			"Qps": []TestDescription{{
-				Name:             "dns",
-				OutputFilePrefix: "Qps",
-				Parser:           parseResponsivenessData,
-			}},
-		},
-	}
+	//dnsBenchmarkDescriptions = TestDescriptions{
+	//	"dns": {
+	//		"Latency": []TestDescription{{
+	//			Name:             "dns",
+	//			OutputFilePrefix: "Latency",
+	//			Parser:           parseResponsivenessData,
+	//		}},
+	//		"LatencyPerc": []TestDescription{{
+	//			Name:             "dns",
+	//			OutputFilePrefix: "LatencyPerc",
+	//			Parser:           parseResponsivenessData,
+	//		}},
+	//		"Queries": []TestDescription{{
+	//			Name:             "dns",
+	//			OutputFilePrefix: "Queries",
+	//			Parser:           parseResponsivenessData,
+	//		}},
+	//		"Qps": []TestDescription{{
+	//			Name:             "dns",
+	//			OutputFilePrefix: "Qps",
+	//			Parser:           parseResponsivenessData,
+	//		}},
+	//	},
+	//}
 
 	jobTypeToDescriptions = map[string]TestDescriptions{
 		"performance":  performanceDescriptions,
-		"benchmark":    benchmarkDescriptions,
-		"dnsBenchmark": dnsBenchmarkDescriptions,
+		//"benchmark":    benchmarkDescriptions,
+		//"dnsBenchmark": dnsBenchmarkDescriptions,
 	}
 
 	// TestConfig contains all the test PerfDash supports now. Downloader will download and
@@ -254,6 +254,8 @@ func getProwConfig() (Jobs, error) {
 	if err := yaml.Unmarshal(b, conf); err != nil {
 		return nil, fmt.Errorf("error unmarshaling prow config from GitHub: %v", err)
 	}
+	fmt.Printf("---------ProwConfig: %v\n", conf)
+
 	jobs := Jobs{}
 	for _, periodic := range conf.Periodics {
 		var thisPeriodicConfig Tests
@@ -293,7 +295,9 @@ func getProwConfig() (Jobs, error) {
 			continue
 		}
 		if thisPeriodicConfig.Prefix == "" || thisPeriodicConfig.Descriptions == nil {
-			return nil, fmt.Errorf("invalid perfdash config of periodic %q: none or both of prefix and job type must be specified", periodic.Name)
+			fmt.Fprintf(os.Stderr,"invalid perfdash config of periodic %q: none or both of prefix and job type must be specified", periodic.Name)
+			//return nil, fmt.Errorf("invalid perfdash config of periodic %q: none or both of prefix and job type must be specified", periodic.Name)
+			continue
 		}
 		jobs[periodic.Name] = thisPeriodicConfig
 	}

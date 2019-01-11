@@ -27,7 +27,7 @@ import (
 
 // Downloader is the interface that gets a data from a predefined source.
 type Downloader interface {
-	getData() (MetricToBuildData, error)
+	getData() (JobToCategoryData, error)
 }
 
 // BuildData contains job name and a map from build number to perf data.

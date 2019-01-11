@@ -36,6 +36,7 @@ var (
 	www    = flag.Bool("www", false, "If true, start a web-server to server performance data")
 	wwwDir = flag.String("dir", "www", "If non-empty, add a file server for this directory at the root of the web server")
 	builds = flag.Int("builds", maxBuilds, "Total builds number")
+	localTestDir = flag.String("local_dir", "test_dir", "")
 )
 
 func main() {
@@ -47,8 +48,8 @@ func main() {
 }
 
 func run() error {
+	var downloader Downloader
 	flag.Parse()
-
 	if *builds > maxBuilds || *builds < 0 {
 		fmt.Printf("Invalid number of builds: %d, setting to %d\n", *builds, maxBuilds)
 		*builds = maxBuilds
@@ -56,7 +57,12 @@ func run() error {
 
 	// TODO(random-liu): Add a top layer downloader to download build log from different buckets when we support
 	// more buckets in the future.
-	downloader := NewGoogleGCSDownloader(*builds)
+
+	if *localTestDir != "" {
+		downloader = NewLocalDownloader()
+	} else {
+		downloader = NewGoogleGCSDownloader(*builds)
+	}
 	result := make(JobToCategoryData)
 	var err error
 
