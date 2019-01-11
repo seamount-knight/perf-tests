@@ -99,8 +99,7 @@ steps:
       min: 1
       max: {{$namespaces}}
     replicasPerNamespace: {{$bigRcsPerNamespace}}
-#    tuningSet: RandomizedSaturationTimeLimited
-    tuningSet: QPS
+    tuningSet: RandomizedSaturationTimeLimited
     objectBundle:
     - basename: big-rc
       objectTemplatePath: rc.yaml
@@ -112,8 +111,7 @@ steps:
       min: 1
       max: {{$namespaces}}
     replicasPerNamespace: {{$mediumRcsPerNamespace}}
-#    tuningSet: RandomizedSaturationTimeLimited
-    tuningSet: QPS
+    tuningSet: RandomizedSaturationTimeLimited
     objectBundle:
     - basename: medium-rc
       objectTemplatePath: rc.yaml
@@ -125,8 +123,7 @@ steps:
       min: 1
       max: {{$namespaces}}
     replicasPerNamespace: {{$smallRcsPerNamespace}}
-#    tuningSet: RandomizedSaturationTimeLimited
-    tuningSet: QPS
+    tuningSet: RandomizedSaturationTimeLimited
     objectBundle:
     - basename: small-rc
       objectTemplatePath: rc.yaml
