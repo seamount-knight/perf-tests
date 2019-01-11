@@ -159,7 +159,8 @@ func (s *schedulerLatencyMeasurement) sendRequestToScheduler(c clientset.Interfa
 
 	var masterRegistered = false
 	for _, node := range nodes.Items {
-		if system.IsMasterNode(node.Name) {
+		role, _ := node.Labels["kubernetes.io/role"]
+		if system.IsMasterNode(node.Name) || role == "master" {
 			masterRegistered = true
 		}
 	}
