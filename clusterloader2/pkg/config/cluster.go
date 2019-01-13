@@ -16,12 +16,20 @@ limitations under the License.
 
 package config
 
+const (
+	Local = "local"
+	KS3 = "ks3"
+)
+
 // ClusterLoaderConfig represents all flags used by CLusterLoader
 type ClusterLoaderConfig struct {
 	ClusterConfig     ClusterConfig `json: clusterConfig`
 	ReportDir         string        `json: reportDir`
 	TestConfigPath    string        `json: testConfigPath`
 	TestOverridesPath []string      `json: testOverrides`
+	TestJob 		  string 		`json: testJob`
+	BuildNumber 	  string  		`json: buildNumber`
+	ReportType 		  string `json: reportType`
 }
 
 // ClusterConfig is a structure that represents cluster description.

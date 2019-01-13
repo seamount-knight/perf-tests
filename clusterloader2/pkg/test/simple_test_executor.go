@@ -18,8 +18,6 @@ package test
 
 import (
 	"fmt"
-	"io/ioutil"
-	"path"
 	"time"
 
 	"github.com/golang/glog"
@@ -36,7 +34,8 @@ const (
 	indexPlaceholder = "Index"
 )
 
-type simpleTestExecutor struct{}
+type simpleTestExecutor struct{
+}
 
 func createSimpleTestExecutor() TestExecutor {
 	return &simpleTestExecutor{}
@@ -84,14 +83,24 @@ func (ste *simpleTestExecutor) ExecuteTest(ctx Context, conf *api.Config) *error
 		}
 		if ctx.GetClusterLoaderConfig().ReportDir == "" {
 			glog.Infof("%v: %v", summary.SummaryName(), summaryText)
-		} else {
-			// TODO(krzysied): Remember to keep original filename style for backward compatibility.
-			filePath := path.Join(ctx.GetClusterLoaderConfig().ReportDir, summary.SummaryName()+"_"+conf.Name+"_"+time.Now().Format(time.RFC3339)+".txt")
-			if err := ioutil.WriteFile(filePath, []byte(summaryText), 0644); err != nil {
-				errList.Append(fmt.Errorf("writing to file %v error: %v", filePath, err))
-				continue
-			}
 		}
+
+
+		err = GetReport(ctx).ReportSummary(ctx, conf, summary)
+		if err != nil {
+			errList.Append(err)
+			continue
+		}
+		//if ctx.GetClusterLoaderConfig().ReportDir == "" {
+		//	glog.Infof("%v: %v", summary.SummaryName(), summaryText)
+		//} else {
+		//	// TODO(krzysied): Remember to keep original filename style for backward compatibility.
+		//	filePath := path.Join(ctx.GetClusterLoaderConfig().ReportDir, summary.SummaryName()+"_"+conf.Name+"_"+time.Now().Format(time.RFC3339)+".txt")
+		//	if err := ioutil.WriteFile(filePath, []byte(summaryText), 0644); err != nil {
+		//		errList.Append(fmt.Errorf("writing to file %v error: %v", filePath, err))
+		//		continue
+		//	}
+		//}
 	}
 	return errList
 }

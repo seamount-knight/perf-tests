@@ -68,6 +68,9 @@ func initFlags() {
 	flags.StringVar(&clusterLoaderConfig.ReportDir, "report-dir", "", "Path to the directory where the reports should be saved. Default is empty, which cause reports being written to standard output.")
 	flags.StringArrayVar(&testConfigPaths, "testconfig", []string{}, "Paths to the test config files")
 	flags.StringArrayVar(&clusterLoaderConfig.TestOverridesPath, "testoverrides", []string{}, "Paths to the config overrides file. The latter overrides take precedence over changes in former files.")
+	flags.StringVar(&clusterLoaderConfig.TestJob, "testjob", "loader_test", "")
+	flags.StringVar(&clusterLoaderConfig.BuildNumber, "buildnum", "0", "")
+	flags.StringVar(&clusterLoaderConfig.ReportType, "report-type", "local", "")
 	initClusterFlags()
 }
 

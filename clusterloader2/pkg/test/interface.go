@@ -62,3 +62,8 @@ type TestExecutor interface {
 	ExecutePhase(ctx Context, phase *api.Phase) *errors.ErrorList
 	ExecuteObject(ctx Context, object *api.Object, namespace string, replicaIndex int32, operation OperationType) *errors.ErrorList
 }
+
+type SummaryReporter interface {
+	ReportSummary(ctx Context,  conf *api.Config, summary measurement.Summary) error
+}
+

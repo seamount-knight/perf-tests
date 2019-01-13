@@ -53,3 +53,8 @@ type Summary interface {
 	SummaryName() string
 	PrintSummary() (string, error)
 }
+
+//type SummaryReporter interface {
+//	ReportSummary(summary Summary) error
+//}
+
