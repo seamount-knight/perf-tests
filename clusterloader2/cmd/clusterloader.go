@@ -18,20 +18,16 @@ package main
 
 import (
 	"fmt"
-	"os"
-	"path"
-	"time"
-
 	"github.com/golang/glog"
-	ginkgoconfig "github.com/onsi/ginkgo/config"
-	ginkgoreporters "github.com/onsi/ginkgo/reporters"
-	ginkgotypes "github.com/onsi/ginkgo/types"
 	"k8s.io/perf-tests/clusterloader2/pkg/config"
 	"k8s.io/perf-tests/clusterloader2/pkg/errors"
 	"k8s.io/perf-tests/clusterloader2/pkg/flags"
 	"k8s.io/perf-tests/clusterloader2/pkg/framework"
 	"k8s.io/perf-tests/clusterloader2/pkg/test"
 	"k8s.io/perf-tests/clusterloader2/pkg/util"
+	"os"
+	"path"
+	"time"
 
 	_ "k8s.io/perf-tests/clusterloader2/pkg/measurement/common/bundle"
 	_ "k8s.io/perf-tests/clusterloader2/pkg/measurement/common/simple"
@@ -71,6 +67,13 @@ func initFlags() {
 	flags.StringVar(&clusterLoaderConfig.TestJob, "testjob", "loader_test", "")
 	flags.StringVar(&clusterLoaderConfig.BuildNumber, "buildnum", "0", "")
 	flags.StringVar(&clusterLoaderConfig.ReportType, "report-type", "local", "")
+
+	flags.StringVar(&clusterLoaderConfig.AccessKeyID, "accesskeyid", "", "")
+	flags.StringVar(&clusterLoaderConfig.AccessKeySecret, "accesskeysecret", "", "")
+	flags.StringVar(&clusterLoaderConfig.Region, "region", "", "")
+	flags.StringVar(&clusterLoaderConfig.Bucket, "bucket", "", "")
+	flags.StringVar(&clusterLoaderConfig.Config, "config", "", "")
+
 	initClusterFlags()
 }
 
@@ -153,7 +156,7 @@ func printTestResult(name, status, errors string) {
 }
 
 func main() {
-	//defer glog.Flush()
+	defer glog.Flush()
 	initFlags()
 	if err := flags.Parse(); err != nil {
 		glog.Fatalf("Flag parse failed: %v", err)
@@ -161,6 +164,10 @@ func main() {
 	if errList := validateFlags(); !errList.IsEmpty() {
 		glog.Fatalf("Parsing flags error: %v", errList.String())
 	}
+	if clusterLoaderConfig.Config != "" {
+		clusterLoaderConfig.ParseClusterLoaderConfig()
+	}
+
 	mclient, err := framework.NewMultiClientSet(clusterLoaderConfig.ClusterConfig.KubeConfigPath, 1)
 	if err != nil {
 		glog.Fatalf("Client creation error: %v", err)

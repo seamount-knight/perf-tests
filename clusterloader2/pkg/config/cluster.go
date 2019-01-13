@@ -16,6 +16,13 @@ limitations under the License.
 
 package config
 
+import (
+	"bytes"
+	"fmt"
+	"io/ioutil"
+	"k8s.io/apimachinery/pkg/util/yaml"
+)
+
 const (
 	Local = "local"
 	KS3 = "ks3"
@@ -30,6 +37,11 @@ type ClusterLoaderConfig struct {
 	TestJob 		  string 		`json: testJob`
 	BuildNumber 	  string  		`json: buildNumber`
 	ReportType 		  string `json: reportType`
+	AccessKeyID string `json: accessKeyID`
+	AccessKeySecret string `json: accessKeySecret`
+	Bucket string `json: bucket`
+	Region string `json: region`
+	Config string
 }
 
 // ClusterConfig is a structure that represents cluster description.
@@ -40,4 +52,15 @@ type ClusterConfig struct {
 	// TODO(krzysied): Add support for HA cluster with more than one master.
 	MasterIP   string `json: masterIP`
 	MasterName string `json: masterName`
+}
+
+func (config *ClusterLoaderConfig) ParseClusterLoaderConfig()  error {
+	b, err := ioutil.ReadFile(config.Config)
+	if err != nil {
+		return  err
+	}
+	if err := yaml.NewYAMLOrJSONDecoder(bytes.NewBuffer(b), 4096).Decode(&config); err != nil {
+		return fmt.Errorf("decoding failed: %v", err)
+	}
+	return nil
 }
