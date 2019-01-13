@@ -43,12 +43,11 @@ func (r *ReportKS3) ReportSummary(ctx Context, conf *api.Config, summary measure
 		return err
 	}
 
-	bucket := path.Join(ctx.GetClusterLoaderConfig().TestJob, ctx.GetClusterLoaderConfig().BuildNumber)
-	fileNmae := path.Join(summary.SummaryName()+"_"+conf.Name+".txt")
-	return r.Put2KS3(bucket, fileNmae, summaryText)
+	fileNmae := path.Join(ctx.GetClusterLoaderConfig().TestJob, ctx.GetClusterLoaderConfig().BuildNumber, summary.SummaryName()+"_"+conf.Name+".txt")
+	return r.Put2KS3(fileNmae, summaryText)
 }
 
-func (r *ReportKS3) Put2KS3(path, fileName, summaryText string)error  {
+func (r *ReportKS3) Put2KS3(path, summaryText string)error  {
 	return r.Put(r.ks3Path(path), []byte(summaryText), "application/octet-stream", "private", r.getOptions())
 }
 

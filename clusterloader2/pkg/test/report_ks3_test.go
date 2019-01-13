@@ -31,7 +31,7 @@ func TestReportKS3_Put2KS3(t *testing.T) {
 	}
 	fileName := "kubemark-100/3/apiresponse_load.txt"
 	summaryText := `{"test":"ok"}`
-	err = reportKS3.Put2KS3(fileName, fileName, summaryText)
+	err = reportKS3.Put2KS3(fileName, summaryText)
 
 	if err != nil {
 		t.Fatal(err)
