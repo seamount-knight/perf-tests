@@ -47,7 +47,12 @@ func (r *ReportKS3) ReportSummary(ctx Context, conf *api.Config, summary measure
 	}
 
 	fileNmae := path.Join(ctx.GetClusterLoaderConfig().TestJob, ctx.GetClusterLoaderConfig().BuildNumber, summary.SummaryName()+"_"+conf.Name+".txt")
-	return r.Put2KS3(fileNmae, summaryText)
+	err = r.Put2KS3(fileNmae, summaryText)
+	if err != nil {
+		return err
+	}
+	lastBuildFileName := path.Join(ctx.GetClusterLoaderConfig().TestJob, "lastBuildNum")
+	return r.Put2KS3(lastBuildFileName, ctx.GetClusterLoaderConfig().BuildNumber)
 }
 
 func (r *ReportKS3) Put2KS3(path, summaryText string)error  {

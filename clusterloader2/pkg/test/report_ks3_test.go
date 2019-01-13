@@ -24,19 +24,19 @@ func getReportKS3() (*ReportKS3, error) {
 	return NewReportKS3(getKS3Config()), nil
 }
 
-func TestReportKS3_Put2KS3(t *testing.T) {
-	reportKS3, err := getReportKS3()
-	if err != nil {
-		t.Fatal(err)
-	}
-	fileName := "kubemark-100/3/apiresponse_load.txt"
-	summaryText := `{"test":"ok"}`
-	err = reportKS3.Put2KS3(fileName, summaryText)
-
-	if err != nil {
-		t.Fatal(err)
-	}
-}
+//func TestReportKS3_Put2KS3(t *testing.T) {
+//	reportKS3, err := getReportKS3()
+//	if err != nil {
+//		t.Fatal(err)
+//	}
+//	fileName := "kubemark-load-100/3/apiresponse_load.txt"
+//	summaryText := `{"test":"ok"}`
+//	err = reportKS3.Put2KS3(fileName, summaryText)
+//
+//	if err != nil {
+//		t.Fatal(err)
+//	}
+//}
 
 func TestList(t *testing.T) {
 	reportKS3, err := getReportKS3()
@@ -44,7 +44,7 @@ func TestList(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	path := "kubemark-100/3"
+	path := "kubemark-load-100/53"
 	if path != "/" && path[len(path)-1] != '/' {
 		path = path + "/"
 	}
@@ -53,7 +53,7 @@ func TestList(t *testing.T) {
 		prefix = "/"
 	}
 
-	listResponse, err := reportKS3.List(reportKS3.ks3Path(path), "/", "", listMax)
+	listResponse, err := reportKS3.List(reportKS3.ks3Path(path), "", "", listMax)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -88,7 +88,7 @@ func TestGetObject(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	data, err := reportKS3.Get("/kubemark-100/1/apiresponse_load.txt")
+	data, err := reportKS3.Get("kubemark-load-100/lastBuildNum")
 	if err != nil {
 		t.Fatal(err)
 	}

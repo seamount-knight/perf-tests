@@ -36,7 +36,7 @@ var (
 	www    = flag.Bool("www", false, "If true, start a web-server to server performance data")
 	wwwDir = flag.String("dir", "www", "If non-empty, add a file server for this directory at the root of the web server")
 	builds = flag.Int("builds", maxBuilds, "Total builds number")
-	localTestDir = flag.String("local_dir", "test_dir", "")
+	localTestDir = flag.String("test-data", "local", "")
 )
 
 func main() {
@@ -58,9 +58,12 @@ func run() error {
 	// TODO(random-liu): Add a top layer downloader to download build log from different buckets when we support
 	// more buckets in the future.
 
-	if *localTestDir != "" {
+	switch *localTestDir {
+	case "local":
 		downloader = NewLocalDownloader()
-	} else {
+	case "ks3":
+		downloader = NewKs3Downloader(*builds)
+	default:
 		downloader = NewGoogleGCSDownloader(*builds)
 	}
 	result := make(JobToCategoryData)

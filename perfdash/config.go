@@ -19,13 +19,13 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"k8s.io/contrib/test-utils/utils"
 	"net/http"
 	"os"
 	"strconv"
 	"strings"
 
 	"github.com/ghodss/yaml"
-	"k8s.io/contrib/test-utils/utils"
 )
 
 // To add new e2e test support, you need to:
@@ -223,10 +223,12 @@ var (
 )
 
 func getProwConfigOrDie() Jobs {
-	jobs, err := getProwConfig()
-	if err != nil {
-		panic(err)
-	}
+	jobs := make(map[string]Tests)
+	//jobs, err := getProwConfig()
+	//if err != nil {
+	//	panic(err)
+	//}
+	//return jobs
 	return jobs
 }
 
@@ -239,17 +241,7 @@ type periodic struct {
 	Tags []string `json:"tags"`
 }
 
-func getProwConfig() (Jobs, error) {
-	fmt.Fprintf(os.Stderr, "Fetching prow config from GitHub...\n")
-	resp, err := http.Get("https://raw.githubusercontent.com/kubernetes/test-infra/master/config/jobs/kubernetes/sig-scalability/sig-scalability-periodic-jobs.yaml")
-	if err != nil {
-		return nil, fmt.Errorf("error fetching prow config from GitHub: %v", err)
-	}
-	defer resp.Body.Close()
-	b, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		return nil, fmt.Errorf("error reading prow config from GitHub: %v", err)
-	}
+func parseProwConfig(b []byte) (Jobs, error) {
 	conf := &config{}
 	if err := yaml.Unmarshal(b, conf); err != nil {
 		return nil, fmt.Errorf("error unmarshaling prow config from GitHub: %v", err)
@@ -303,4 +295,18 @@ func getProwConfig() (Jobs, error) {
 	}
 	fmt.Printf("Read config with %d jobs\n", len(jobs))
 	return jobs, nil
+}
+
+func getProwConfig() (Jobs, error) {
+	fmt.Fprintf(os.Stderr, "Fetching prow config from GitHub...\n")
+	resp, err := http.Get("https://raw.githubusercontent.com/kubernetes/test-infra/master/config/jobs/kubernetes/sig-scalability/sig-scalability-periodic-jobs.yaml")
+	if err != nil {
+		return nil, fmt.Errorf("error fetching prow config from GitHub: %v", err)
+	}
+	defer resp.Body.Close()
+	b, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading prow config from GitHub: %v", err)
+	}
+	return parseProwConfig(b)
 }
