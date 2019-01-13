@@ -42,12 +42,18 @@ func (r *ReportKS3) ReportSummary(ctx Context, conf *api.Config, summary measure
 	if err != nil {
 		return err
 	}
+	if summaryText == "" {
+		return nil
+	}
 
 	fileNmae := path.Join(ctx.GetClusterLoaderConfig().TestJob, ctx.GetClusterLoaderConfig().BuildNumber, summary.SummaryName()+"_"+conf.Name+".txt")
 	return r.Put2KS3(fileNmae, summaryText)
 }
 
 func (r *ReportKS3) Put2KS3(path, summaryText string)error  {
+	if summaryText == "" {
+		return nil
+	}
 	return r.Put(r.ks3Path(path), []byte(summaryText), "application/octet-stream", "private", r.getOptions())
 }
 

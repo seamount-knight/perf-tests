@@ -76,11 +76,11 @@ func (ste *simpleTestExecutor) ExecuteTest(ctx Context, conf *api.Config) *error
 	}
 
 	for _, summary := range ctx.GetMeasurementManager().GetSummaries() {
-		summaryText, err := summary.PrintSummary()
-		if err != nil {
-			errList.Append(fmt.Errorf("printing summary %s error: %v", summary.SummaryName(), err))
-			continue
-		}
+		//summaryText, err := summary.PrintSummary()
+		//if err != nil {
+		//	errList.Append(fmt.Errorf("printing summary %s error: %v", summary.SummaryName(), err))
+		//	continue
+		//}
 		//if ctx.GetClusterLoaderConfig().ReportDir == "" {
 		//	glog.Infof("%v: %v", summary.SummaryName(), summaryText)
 		//}
