@@ -141,10 +141,9 @@ func (k *Ks3Downloader) getJobData(wg *sync.WaitGroup, result JobToCategoryData,
 				for _, testDescription := range testDescriptions {
 					testData, err := k.GetFileFromBucket(job, buildNumber, fmt.Sprintf("%s_%s.txt", testDescription.OutputFilePrefix, testDescription.Name))
 					if err != nil {
-						fmt.Println(err)
 						continue
 					}
-
+					fmt.Println(job, buildNumber, fmt.Sprintf("%s_%s.txt", testDescription.OutputFilePrefix, testDescription.Name))
 					func() {
 						resultLock.Lock()
 						buildData := result[tests.Prefix][categoryLabel][testLabel]
@@ -160,7 +159,6 @@ func (k *Ks3Downloader) getJobData(wg *sync.WaitGroup, result JobToCategoryData,
 
 func (k *Ks3Downloader) GetLastBuildNumber(job string) (int, error) {
 	filePath := fmt.Sprintf("%s/lastBuildNum", job)
-	fmt.Println("------------", filePath)
 	data, err := k.Bucket.Get(filePath)
 	if err != nil {
 		fmt.Println(err)
@@ -186,7 +184,6 @@ func (k *Ks3Downloader) ListBuckets(path string) ([]string, error) {
 	if k.ks3Path("") == "" {
 		prefix = "/"
 	}
-	fmt.Println("----------", path)
 	listResponse, err := k.Bucket.List(k.ks3Path(path), "/", "", listMax)
 	if err != nil {
 		return files, err
@@ -213,7 +210,6 @@ func (k *Ks3Downloader) ListBuckets(path string) ([]string, error) {
 
 func (k *Ks3Downloader) GetFileFromBucket(job string, buildNumber int, fileName string) ([]byte, error) {
 	filePath := fmt.Sprintf("%s/%d/%s", job, buildNumber, fileName)
-	fmt.Println("----------", filePath)
 	data, err := k.Bucket.Get(filePath)
 	if err != nil {
 		return nil, err
