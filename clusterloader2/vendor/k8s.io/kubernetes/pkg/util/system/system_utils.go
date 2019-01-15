@@ -33,7 +33,7 @@ func IsMasterNode(nodeName string) bool {
 	if len(nodeName) >= 10 {
 		return strings.HasSuffix(nodeName[:len(nodeName)-3], "master-")
 	}
-	if os.Getenv("Master_Name") == nodeName {
+	if os.Getenv("MASTER_NAME") == nodeName {
 		return true
 	}
 	return false
