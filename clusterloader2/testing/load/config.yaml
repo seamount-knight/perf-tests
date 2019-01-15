@@ -58,6 +58,8 @@ steps:
     Params:
       action: start
       nodeMode: {{$NODE_MODE}}
+      masterName: 10.21.0.6
+      masterIP: 10.21.0.6
 # Create SVCs
 - phases:
   - namespaceRange:
@@ -250,3 +252,5 @@ steps:
     Method: TestMetrics
     Params:
       action: gather
+      masterName: 10.21.0.6
+      masterIP: 10.21.0.6
