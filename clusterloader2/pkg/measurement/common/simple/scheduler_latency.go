@@ -162,8 +162,9 @@ func (s *schedulerLatencyMeasurement) sendRequestToScheduler(c clientset.Interfa
 		fmt.Println("-----------------", node.Labels)
 		role, _ := node.Labels["kubernetes.io/role"]
 		fmt.Println("-----------------", role)
-		if system.IsMasterNode(node.Name) || role == "master" {
+		if system.IsMasterNode(node.Name) || strings.Contains(role, "master") {
 			masterRegistered = true
+			break
 		}
 	}
 	fmt.Println("------------------host", host)
