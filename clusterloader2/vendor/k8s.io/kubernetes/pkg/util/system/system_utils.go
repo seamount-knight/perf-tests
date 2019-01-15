@@ -18,6 +18,7 @@ package system
 
 import (
 	"strings"
+	"os"
 )
 
 // TODO: find a better way of figuring out if given node is a registered master.
@@ -31,6 +32,9 @@ func IsMasterNode(nodeName string) bool {
 	}
 	if len(nodeName) >= 10 {
 		return strings.HasSuffix(nodeName[:len(nodeName)-3], "master-")
+	}
+	if os.Getenv("MasterName") == nodeName {
+		return true
 	}
 	return false
 }
