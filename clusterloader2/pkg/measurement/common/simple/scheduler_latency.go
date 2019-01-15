@@ -164,7 +164,8 @@ func (s *schedulerLatencyMeasurement) sendRequestToScheduler(c clientset.Interfa
 			masterRegistered = true
 		}
 	}
-
+	fmt.Println("------------------host", host)
+	fmt.Println("------------------master name", masterName)
 	var responseText string
 	if masterRegistered {
 		ctx, cancel := context.WithTimeout(context.Background(), singleRestCallTimeout)
