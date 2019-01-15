@@ -159,16 +159,12 @@ func (s *schedulerLatencyMeasurement) sendRequestToScheduler(c clientset.Interfa
 
 	var masterRegistered = false
 	for _, node := range nodes.Items {
-		fmt.Println("-----------------", node.Labels)
 		role, _ := node.Labels["kubernetes.io/role"]
-		fmt.Println("-----------------", role)
 		if system.IsMasterNode(node.Name) || strings.Contains(role, "master") {
 			masterRegistered = true
 			break
 		}
 	}
-	fmt.Println("------------------host", host)
-	fmt.Println("------------------master name", masterName)
 	var responseText string
 	if masterRegistered {
 		ctx, cancel := context.WithTimeout(context.Background(), singleRestCallTimeout)
@@ -187,7 +183,6 @@ func (s *schedulerLatencyMeasurement) sendRequestToScheduler(c clientset.Interfa
 			return "", err
 		}
 		responseText = string(body)
-		fmt.Println(responseText)
 	} else {
 		// If master is not registered fall back to old method of using SSH.
 		if provider == "gke" {
