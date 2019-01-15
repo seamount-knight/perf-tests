@@ -473,8 +473,6 @@ func (r Request) finalURLTemplate() url.URL {
 	}
 	r.params = newParams
 	url := r.URL()
-	fmt.Println("******************", url.String())
-	fmt.Println("*******************", url.Path)
 	return *url
 }
 
@@ -662,7 +660,6 @@ func (r *Request) request(fn func(*http.Request, *http.Response)) error {
 	retries := 0
 	for {
 		url := r.URL().String()
-		fmt.Println("3***************",url)
 		req, err := http.NewRequest(r.verb, url, r.body)
 		if err != nil {
 			return err

@@ -187,6 +187,7 @@ func (s *schedulerLatencyMeasurement) sendRequestToScheduler(c clientset.Interfa
 			return "", err
 		}
 		responseText = string(body)
+		fmt.Println(responseText)
 	} else {
 		// If master is not registered fall back to old method of using SSH.
 		if provider == "gke" {
