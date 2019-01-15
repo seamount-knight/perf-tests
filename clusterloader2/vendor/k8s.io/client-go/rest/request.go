@@ -473,6 +473,8 @@ func (r Request) finalURLTemplate() url.URL {
 	}
 	r.params = newParams
 	url := r.URL()
+	fmt.Println("******************", url.String())
+	fmt.Println("*******************", url.Path)
 	return *url
 }
 
