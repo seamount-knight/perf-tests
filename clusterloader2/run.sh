@@ -1,0 +1,1 @@
+/bin/bash -c "go run cmd/clusterloader.go --kubeconfig=/root/.kube/config --testconfig=./testing/load/config.yaml --provider=kubemark --masterip=10.21.128.13  --report-dir=./report --logtostderr=true"
