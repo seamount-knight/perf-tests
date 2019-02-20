@@ -17,8 +17,9 @@ limitations under the License.
 package system
 
 import (
-	"strings"
+	"fmt"
 	"os"
+	"strings"
 )
 
 // TODO: find a better way of figuring out if given node is a registered master.
@@ -27,14 +28,16 @@ func IsMasterNode(nodeName string) bool {
 	// However, using regexp.MatchString() results even in more than 35%
 	// of all space allocations in ControllerManager spent in this function.
 	// That's why we are trying to be a bit smarter.
+	fmt.Println("-----------MASTER_NAME", os.Getenv("MASTER_NAME"))
+	if os.Getenv("MASTER_NAME") == nodeName {
+		return true
+	}
+
 	if strings.HasSuffix(nodeName, "master") {
 		return true
 	}
 	if len(nodeName) >= 10 {
 		return strings.HasSuffix(nodeName[:len(nodeName)-3], "master-")
-	}
-	if os.Getenv("MASTER_NAME") == nodeName {
-		return true
 	}
 	return false
 }
