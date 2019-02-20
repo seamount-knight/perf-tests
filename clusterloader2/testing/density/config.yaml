@@ -52,8 +52,8 @@ steps:
     Method: TestMetrics
     Params:
       action: start
-      masterName: 10.21.0.6
-      masterIP: 10.21.0.6
+      masterName: 10.21.128.13
+      masterIP: 10.21.128.13
       nodeMode: {{$NODE_MODE}}
       resourceConstraints: {{$DENSITY_RESOURCE_CONSTRAINTS_FILE}}
 # Create saturation pods
@@ -190,5 +190,5 @@ steps:
     Method: TestMetrics
     Params:
       action: gather
-      masterName: 10.21.0.6
-      masterIP: 10.21.0.6
+      masterName: 10.21.128.13
+      masterIP: 10.21.128.13
