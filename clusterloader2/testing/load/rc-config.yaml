@@ -91,7 +91,7 @@ steps:
   - Identifier: Timer
     Method: Timer
     Params:
-      action: start
+      action: stop
       label: rc-scale-create
 - name: Creating RCs
 
@@ -132,7 +132,7 @@ steps:
   - Identifier: Timer
     Method: Timer
     Params:
-      action: stop
+      action: start
       label: rc-scale-rc2
 - phases:
   - namespaceRange:
