@@ -25,7 +25,7 @@ func main() {
 	fmt.Println("url: ", url)
 	for !flag {
 		if checkServer(url) {
-			time.Sleep(50 * time.Millisecond)
+			time.Sleep(10 * time.Millisecond)
 			continue
 		}
 		now := time.Now()
@@ -45,6 +45,7 @@ func checkServer(url string) bool {
 			time.Sleep(500 * time.Millisecond)
 		}
 		if resp.StatusCode == http.StatusOK {
+			fmt.Println("ok")
 			return true
 		}
 		fmt.Println(resp.StatusCode)
