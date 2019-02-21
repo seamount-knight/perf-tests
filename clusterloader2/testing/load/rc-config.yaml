@@ -65,11 +65,7 @@ steps:
       kind: ReplicationController
       labelSelector: group = load
       operationTimeout: 15m
-  - Identifier: Timer
-    Method: Timer
-    Params:
-      action: start
-      label: rc-scale
+  
 
 - phases:
   - namespaceRange:
@@ -89,9 +85,15 @@ steps:
     Method: WaitForControlledPodsRunning
     Params:
       action: gather
-  
 - name: Creating RCs
+
 # Scale RCs
+- measurements:
+  - Identifier: Timer
+      Method: Timer
+      Params:
+        action: start
+        label: rc-scale1
 - phases:
   - namespaceRange:
       min: 1
@@ -110,9 +112,20 @@ steps:
     Method: WaitForControlledPodsRunning
     Params:
       action: gather
+  - Identifier: Timer
+      Method: Timer
+      Params:
+        action: stop
+        label: rc-scale1
 - name: Scaling RCs
 
 # Scale RCs 2
+- measurements:
+  - Identifier: Timer
+      Method: Timer
+      Params:
+        action: start
+        label: rc-scale2
 - phases:
   - namespaceRange:
       min: 1
@@ -131,6 +144,11 @@ steps:
     Method: WaitForControlledPodsRunning
     Params:
       action: gather
+  - Identifier: Timer
+      Method: Timer
+      Params:
+        action: start
+        label: rc-scale2
 - name: Scaling RCs2
 
 # Delete SVCs
@@ -160,5 +178,10 @@ steps:
   - Identifier: Timer
     Method: Timer
     Params:
-      action: stop
-      label: rc-scale
+      action: gather
+      label: rc-scale1
+  - Identifier: Timer
+    Method: Timer
+    Params:
+      action: gather
+      label: rc-scale2
