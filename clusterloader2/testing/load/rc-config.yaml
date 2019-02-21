@@ -100,7 +100,7 @@ steps:
     - basename: big-rc
       objectTemplatePath: rc.yaml
       templateFillMap:
-        ReplicasMin: {{MultiplyInt $BIG_GROUP_SIZE 0}}}
+        ReplicasMin: {{MultiplyInt $BIG_GROUP_SIZE 0.5}}}
         ReplicasMax: {{MultiplyInt $BIG_GROUP_SIZE 0.5}}
         SvcName: big-service
 
@@ -121,8 +121,8 @@ steps:
     - basename: big-rc
       objectTemplatePath: rc.yaml
       templateFillMap:
-        ReplicasMin: {{MultiplyInt $BIG_GROUP_SIZE 1}}
-        ReplicasMax: {{MultiplyInt $BIG_GROUP_SIZE 1.5}}
+        ReplicasMin: {{MultiplyInt $BIG_GROUP_SIZE 1.0}}
+        ReplicasMax: {{MultiplyInt $BIG_GROUP_SIZE 1.0}}
         SvcName: big-service
 
 - measurements:
