@@ -69,7 +69,17 @@ steps:
       Method: Timer
       Params:
         action: start
-        label: rc-scale
+        label: rc-scale-create
+  - Identifier: Timer
+      Method: Timer
+      Params:
+        action: start
+        label: rc-scale-rc1
+  - Identifier: Timer
+      Method: Timer
+      Params:
+        action: start
+        label: rc-scale-rc2
 - phases:
   - namespaceRange:
       min: 1
