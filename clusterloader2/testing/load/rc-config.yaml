@@ -43,8 +43,8 @@ steps:
     Params:
       action: start
       nodeMode: {{$NODE_MODE}}
-      masterName: 10.21.128.13
-      masterIP: 10.21.128.13
+      masterName: 10.21.128.6
+      masterIP: 10.21.128.6
 # Create SVCs
 - phases:
   - namespaceRange:
@@ -155,10 +155,10 @@ steps:
     Method: TestMetrics
     Params:
       action: gather
-      masterName: 10.21.128.13
-      masterIP: 10.21.128.13
+      masterName: 10.21.128.6
+      masterIP: 10.21.128.6
   - Identifier: Timer
     Method: Timer
     Params:
-      action: gather
+      action: stop
       label: rc-scale
