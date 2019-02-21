@@ -17,13 +17,24 @@ func initFlags() {
 }
 
 func main() {
+	flag := false
+
 	initFlags()
 	flags.Parse()
-	now := time.Now()
+
 	fmt.Println("url: ", url)
-	checkServer(url)
-	duration := time.Since(now)
-	fmt.Println("time: ", duration)
+	for !flag {
+		if checkServer(url) {
+			time.Sleep(50 * time.Millisecond)
+			continue
+		}
+		now := time.Now()
+		checkServer(url)
+		duration := time.Since(now)
+		fmt.Println("time: ", duration)
+		flag = true
+	}
+
 }
 
 func checkServer(url string) bool {
