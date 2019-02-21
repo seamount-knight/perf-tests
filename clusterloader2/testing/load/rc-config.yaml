@@ -65,8 +65,6 @@ steps:
       kind: ReplicationController
       labelSelector: group = load
       operationTimeout: 15m
-  
-
 - phases:
   - namespaceRange:
       min: 1
@@ -121,7 +119,7 @@ steps:
 
 # Scale RCs 2
 - measurements:
-  - Identifier: Timer
+  - Identifier: Timer2
       Method: Timer
       Params:
         action: start
@@ -144,10 +142,10 @@ steps:
     Method: WaitForControlledPodsRunning
     Params:
       action: gather
-  - Identifier: Timer
+  - Identifier: Timer2
       Method: Timer
       Params:
-        action: start
+        action: stop
         label: rc-scale2
 - name: Scaling RCs2
 
@@ -175,12 +173,12 @@ steps:
       action: gather
       masterName: 10.21.128.6
       masterIP: 10.21.128.6
-  - Identifier: Timer
+  - Identifier: Timer1
     Method: Timer
     Params:
       action: gather
       label: rc-scale1
-  - Identifier: Timer
+  - Identifier: Timer2
     Method: Timer
     Params:
       action: gather
