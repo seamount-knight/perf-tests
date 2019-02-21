@@ -112,7 +112,7 @@ func checkMasterSvc(cmdstr string) {
 		// 	flag2 = true
 		// 	now = time.Now()
 		// }
-		if status == "ok" && !flag2 {
+		if status == "ok" && flag2 {
 			time.Sleep(500 * time.Millisecond)
 			dura = time.Since(now)
 			fmt.Println("dura", dura)
