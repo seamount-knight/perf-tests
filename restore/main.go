@@ -1,40 +1,44 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
+	"log"
 	"net/http"
+	"os/exec"
 	"time"
 
 	"k8s.io/perf-tests/clusterloader2/pkg/flags"
 )
 
 var (
-	url = ""
+	apiurl      = ""
+	scheduleurl = ""
+	controlurl  = ""
 )
 
 func initFlags() {
-	flags.StringVar(&url, "url", "", "")
+	flags.StringVar(&apiurl, "apiurl", "", "")
+	flags.StringVar(&scheduleurl, "scheduleurl", "", "")
+	flags.StringVar(&controlurl, "controlurl", "", "")
 }
 
 func main() {
-	flag := false
+	check_master_node()
+}
 
-	initFlags()
-	flags.Parse()
+func check_master_node() {
+	cmdStr := "kubectl  get node 10.21.128.13 | grep 10.21.128.13 | awk {'print $2'}"
+	cmd := exec.Command(cmdStr)
 
-	fmt.Println("url: ", url)
-	for !flag {
-		if checkServer(url) {
-			time.Sleep(10 * time.Millisecond)
-			continue
-		}
-		now := time.Now()
-		checkServer(url)
-		duration := time.Since(now)
-		fmt.Println("time: ", duration)
-		flag = true
+	var out bytes.Buffer
+	cmd.Stdout = &out //输出
+
+	err := cmd.Run()
+	if err != nil {
+		log.Fatal(err)
 	}
-
+	fmt.Printf("in all caps: %q\n", out.String())
 }
 
 func checkServer(url string) bool {
