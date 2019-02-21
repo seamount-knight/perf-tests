@@ -88,6 +88,7 @@ steps:
     Method: WaitForControlledPodsRunning
     Params:
       action: gather
+      label: rc-scale
 - name: Creating RCs
 # # Scale RCs
 # - phases:
@@ -159,4 +160,5 @@ steps:
   - Identifier: Timer
     Method: Timer
     Params:
-      action: gather
+      action: stop
+      label: rc-scale
