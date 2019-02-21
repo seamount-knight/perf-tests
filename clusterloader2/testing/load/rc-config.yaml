@@ -50,7 +50,7 @@ steps:
   - namespaceRange:
       min: 1
       max: {{$namespaces}}
-    replicasPerNamespace: {{DivideInt (AddInt $bigRcsPerNamespace 1) 2}}
+    replicasPerNamespace: 1
     tuningSet: Sequence
     objectBundle:
     - basename: big-service
@@ -90,7 +90,7 @@ steps:
   - namespaceRange:
       min: 1
       max: {{$namespaces}}
-    replicasPerNamespace: {{$bigRcsPerNamespace}}
+    replicasPerNamespace: 1
     tuningSet: RandomizedScalingTimeLimited
     objectBundle:
     - basename: big-rc
