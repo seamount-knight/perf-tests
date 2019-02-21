@@ -95,7 +95,7 @@ func checkMasterSvc(cmdstr string) {
 		err := cmd.Run()
 		if err != nil && !flag2 {
 			fmt.Println("err: ", err)
-			time.Sleep(500 * time.Millisecond)
+			time.Sleep(1 * time.Second)
 			flag2 = true
 			now = time.Now()
 			// continue
@@ -103,7 +103,7 @@ func checkMasterSvc(cmdstr string) {
 
 		status := strings.TrimSpace(out.String())
 		fmt.Printf("node status: %q\n", status)
-		if status == "ok" && !flag1 {
+		if status == "ok" && !flag1 && !flag2 {
 			time.Sleep(500 * time.Millisecond)
 			continue
 		}
