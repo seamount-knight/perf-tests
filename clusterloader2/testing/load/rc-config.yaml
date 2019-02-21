@@ -69,6 +69,7 @@ steps:
     Method: Timer
     Params:
       action: start
+      label: rc-scale
 
 - phases:
   - namespaceRange:
@@ -88,7 +89,7 @@ steps:
     Method: WaitForControlledPodsRunning
     Params:
       action: gather
-      label: rc-scale
+  
 - name: Creating RCs
 # # Scale RCs
 # - phases:
