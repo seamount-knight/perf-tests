@@ -65,6 +65,11 @@ steps:
       kind: ReplicationController
       labelSelector: group = load
       operationTimeout: 15m
+  - Identifier: Timer
+    Method: Timer
+    Params:
+      action: start
+
 - phases:
   - namespaceRange:
       min: 1
@@ -95,7 +100,7 @@ steps:
     - basename: big-rc
       objectTemplatePath: rc.yaml
       templateFillMap:
-        ReplicasMin: {{MultiplyInt $BIG_GROUP_SIZE 0}}
+        ReplicasMin: {{MultiplyInt $BIG_GROUP_SIZE 0.5}}}
         ReplicasMax: {{MultiplyInt $BIG_GROUP_SIZE 0.5}}
         SvcName: big-service
 
@@ -116,8 +121,8 @@ steps:
     - basename: big-rc
       objectTemplatePath: rc.yaml
       templateFillMap:
-        ReplicasMin: {{MultiplyInt $BIG_GROUP_SIZE 0}}
-        ReplicasMax: {{MultiplyInt $BIG_GROUP_SIZE 0.5}}
+        ReplicasMin: {{MultiplyInt $BIG_GROUP_SIZE 1}}
+        ReplicasMax: {{MultiplyInt $BIG_GROUP_SIZE 1}}
         SvcName: big-service
 
 - measurements:
@@ -125,24 +130,11 @@ steps:
     Method: WaitForControlledPodsRunning
     Params:
       action: gather
+  - Identifier: Timer
+    Method: Timer
+    Params:
+      action: start
 - name: Scaling RCs
-
-# # Delete RCs
-# - phases:
-#   - namespaceRange:
-#       min: 1
-#       max: {{$namespaces}}
-#     replicasPerNamespace: 0
-#     tuningSet: RandomizedSaturationTimeLimited
-#     objectBundle:
-#     - basename: big-rc
-#       objectTemplatePath: rc.yaml
-# - name: Deleting RCs
-# - measurements:
-#   - Identifier: WaitForRunningRCs
-#     Method: WaitForControlledPodsRunning
-#     Params:
-#       action: gather
 
 # Delete SVCs
 - phases:
