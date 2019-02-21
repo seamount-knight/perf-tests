@@ -95,8 +95,8 @@ steps:
     - basename: big-rc
       objectTemplatePath: rc.yaml
       templateFillMap:
-        ReplicasMin: {{MultiplyInt $BIG_GROUP_SIZE 0.5}}
-        ReplicasMax: {{MultiplyInt $BIG_GROUP_SIZE 1.5}}
+        ReplicasMin: {{MultiplyInt $BIG_GROUP_SIZE 0}}
+        ReplicasMax: {{MultiplyInt $BIG_GROUP_SIZE 0.5}}
         SvcName: big-service
 
 - measurements:
@@ -105,22 +105,45 @@ steps:
     Params:
       action: gather
 - name: Scaling RCs
-# Delete RCs
+# Scale RCs 2
 - phases:
   - namespaceRange:
       min: 1
       max: {{$namespaces}}
-    replicasPerNamespace: 0
-    tuningSet: RandomizedSaturationTimeLimited
+    replicasPerNamespace: 1
+    tuningSet: RandomizedScalingTimeLimited
     objectBundle:
     - basename: big-rc
       objectTemplatePath: rc.yaml
-- name: Deleting RCs
+      templateFillMap:
+        ReplicasMin: {{MultiplyInt $BIG_GROUP_SIZE 0}}
+        ReplicasMax: {{MultiplyInt $BIG_GROUP_SIZE 0.5}}
+        SvcName: big-service
+
 - measurements:
   - Identifier: WaitForRunningRCs
     Method: WaitForControlledPodsRunning
     Params:
       action: gather
+- name: Scaling RCs
+
+# # Delete RCs
+# - phases:
+#   - namespaceRange:
+#       min: 1
+#       max: {{$namespaces}}
+#     replicasPerNamespace: 0
+#     tuningSet: RandomizedSaturationTimeLimited
+#     objectBundle:
+#     - basename: big-rc
+#       objectTemplatePath: rc.yaml
+# - name: Deleting RCs
+# - measurements:
+#   - Identifier: WaitForRunningRCs
+#     Method: WaitForControlledPodsRunning
+#     Params:
+#       action: gather
+
 # Delete SVCs
 - phases:
   - namespaceRange:
