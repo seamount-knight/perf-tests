@@ -66,20 +66,10 @@ steps:
       labelSelector: group = load
       operationTimeout: 15m
   - Identifier: Timer
-      Method: Timer
-      Params:
-        action: start
-        label: rc-scale-create
-  - Identifier: Timer
-      Method: Timer
-      Params:
-        action: start
-        label: rc-scale-rc1
-  - Identifier: Timer
-      Method: Timer
-      Params:
-        action: start
-        label: rc-scale-rc2
+    Method: Timer
+    Params:
+      action: start
+      label: rc-scale-create
 - phases:
   - namespaceRange:
       min: 1
@@ -99,12 +89,19 @@ steps:
     Params:
       action: gather
   - Identifier: Timer
-      Method: Timer
-      Params:
-        action: start
-        label: rc-scale-create
+    Method: Timer
+    Params:
+      action: start
+      label: rc-scale-create
 - name: Creating RCs
 
+# Scale RCs 1
+- measurements:
+  - Identifier: Timer
+    Method: Timer
+    Params:
+      action: start
+      label: rc-scale-rc1
 - phases:
   - namespaceRange:
       min: 1
@@ -124,13 +121,19 @@ steps:
     Params:
       action: gather
   - Identifier: Timer
-      Method: Timer
-      Params:
-        action: stop
-        label: rc-scale-rc1
+    Method: Timer
+    Params:
+      action: stop
+      label: rc-scale-rc1
 - name: Scaling RCs
 
 # Scale RCs 2
+- measurements:
+  - Identifier: Timer
+    Method: Timer
+    Params:
+      action: start
+      label: rc-scale-rc2
 - phases:
   - namespaceRange:
       min: 1
@@ -149,11 +152,11 @@ steps:
     Method: WaitForControlledPodsRunning
     Params:
       action: gather
-  - Identifier: Timer2
-      Method: Timer
-      Params:
-        action: stop
-        label: rc-scale-rc2
+  - Identifier: Timer
+    Method: Timer
+    Params:
+      action: stop
+      label: rc-scale-rc2
 - name: Scaling RCs2
 
 # Delete SVCs
@@ -180,7 +183,7 @@ steps:
       action: gather
       masterName: 10.21.128.6
       masterIP: 10.21.128.6
-  - Identifier: Timer1
+  - Identifier: Timer
     Method: Timer
     Params:
       action: gather
