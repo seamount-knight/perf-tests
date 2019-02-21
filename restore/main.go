@@ -94,7 +94,9 @@ func checkMasterSvc(cmdstr string) {
 
 		err := cmd.Run()
 		if err != nil {
-			log.Fatal(err)
+			fmt.Println("err: ", err)
+			time.Sleep(500 * time.Millisecond)
+			continue
 		}
 
 		status := strings.TrimSpace(out.String())
