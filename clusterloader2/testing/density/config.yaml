@@ -108,78 +108,78 @@ steps:
     Params:
       action: gather
 - name: Creating saturation pods
-# Create latency pods
-- measurements:
-  - Identifier: PodStartupLatency
-    Method: PodStartupLatency
-    Params:
-      action: start
-      labelSelector: group = latency
-- measurements:
-  - Identifier: WaitForRunningLatencyRCs
-    Method: WaitForControlledPodsRunning
-    Params:
-      action: start
-      kind: ReplicationController
-      labelSelector: group = latency
-      operationTimeout: 15m
-- phases:
-  - namespaceRange:
-      min: 1
-      max: {{$namespaces}}
-    replicasPerNamespace: {{$latencyReplicas}}
-    tuningSet: Uniform5qps
-    objectBundle:
-    - basename: latency-pod-rc
-      objectTemplatePath: rc.yaml
-      templateFillMap:
-        Replicas: 1
-        Group: latency
-        CpuRequest: {{$LATENCY_POD_CPU}}m
-        MemoryRequest: {{$LATENCY_POD_MEMORY}}M
-- measurements:
-  - Identifier: WaitForRunningLatencyRCs
-    Method: WaitForControlledPodsRunning
-    Params:
-      action: gather
-- name: Creating latency pods
-# Remove latency pods
-- phases:
-  - namespaceRange:
-      min: 1
-      max: {{$namespaces}}
-    replicasPerNamespace: 0
-    tuningSet: Uniform5qps
-    objectBundle:
-    - basename: latency-pod-rc
-      objectTemplatePath: rc.yaml
-- measurements:
-  - Identifier: WaitForRunningLatencyRCs
-    Method: WaitForControlledPodsRunning
-    Params:
-      action: gather
-- measurements:
-  - Identifier: PodStartupLatency
-    Method: PodStartupLatency
-    Params:
-      action: gather
-- name: Deleting latancy pods
+# # Create latency pods
+# - measurements:
+#   - Identifier: PodStartupLatency
+#     Method: PodStartupLatency
+#     Params:
+#       action: start
+#       labelSelector: group = latency
+# - measurements:
+#   - Identifier: WaitForRunningLatencyRCs
+#     Method: WaitForControlledPodsRunning
+#     Params:
+#       action: start
+#       kind: ReplicationController
+#       labelSelector: group = latency
+#       operationTimeout: 15m
+# - phases:
+#   - namespaceRange:
+#       min: 1
+#       max: {{$namespaces}}
+#     replicasPerNamespace: {{$latencyReplicas}}
+#     tuningSet: Uniform5qps
+#     objectBundle:
+#     - basename: latency-pod-rc
+#       objectTemplatePath: rc.yaml
+#       templateFillMap:
+#         Replicas: 1
+#         Group: latency
+#         CpuRequest: {{$LATENCY_POD_CPU}}m
+#         MemoryRequest: {{$LATENCY_POD_MEMORY}}M
+# - measurements:
+#   - Identifier: WaitForRunningLatencyRCs
+#     Method: WaitForControlledPodsRunning
+#     Params:
+#       action: gather
+# - name: Creating latency pods
+# # Remove latency pods
+# - phases:
+#   - namespaceRange:
+#       min: 1
+#       max: {{$namespaces}}
+#     replicasPerNamespace: 0
+#     tuningSet: Uniform5qps
+#     objectBundle:
+#     - basename: latency-pod-rc
+#       objectTemplatePath: rc.yaml
+# - measurements:
+#   - Identifier: WaitForRunningLatencyRCs
+#     Method: WaitForControlledPodsRunning
+#     Params:
+#       action: gather
+# - measurements:
+#   - Identifier: PodStartupLatency
+#     Method: PodStartupLatency
+#     Params:
+#       action: gather
+# - name: Deleting latancy pods
 # Delete pods
-- phases:
-  - namespaceRange:
-      min: 1
-      max: {{$namespaces}}
-    replicasPerNamespace: 0
-    tuningSet: Uniform5qps
-    objectBundle:
-    - basename: saturation-rc
-      objectTemplatePath: rc.yaml
+# - phases:
+#   - namespaceRange:
+#       min: 1
+#       max: {{$namespaces}}
+#     replicasPerNamespace: 0
+#     tuningSet: Uniform5qps
+#     objectBundle:
+#     - basename: saturation-rc
+#       objectTemplatePath: rc.yaml
 - measurements:
   - Identifier: WaitForRunningSaturationRCs
     Method: WaitForControlledPodsRunning
     Params:
       action: gather
-- name: Deleting saturation pods
+# - name: Deleting saturation pods
 # Collect measurements
 - measurements:
   - Identifier: APIResponsiveness
