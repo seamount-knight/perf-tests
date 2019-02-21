@@ -18,6 +18,7 @@ func initFlags() {
 
 func main() {
 	initFlags()
+	flags.Parse()
 	now := time.Now()
 	fmt.Println("url: ", url)
 	checkServer(url)
