@@ -93,10 +93,12 @@ func checkMasterSvc(cmdstr string) {
 		in.WriteString(cmdstr)
 
 		err := cmd.Run()
-		if err != nil {
+		if err != nil && !flag2 {
 			fmt.Println("err: ", err)
 			time.Sleep(500 * time.Millisecond)
-			continue
+			flag2 = true
+			now = time.Now()
+			// continue
 		}
 
 		status := strings.TrimSpace(out.String())
@@ -105,11 +107,11 @@ func checkMasterSvc(cmdstr string) {
 			time.Sleep(500 * time.Millisecond)
 			continue
 		}
-		fmt.Println(status)
-		if status == "" && !flag2 {
-			flag2 = true
-			now = time.Now()
-		}
+		// fmt.Println(status)
+		// if status == "" && !flag2 {
+		// 	flag2 = true
+		// 	now = time.Now()
+		// }
 		if status == "ok" && !flag2 {
 			time.Sleep(500 * time.Millisecond)
 			dura = time.Since(now)
