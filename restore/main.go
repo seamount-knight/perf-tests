@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	url string
+	url = ""
 )
 
 func initFlags() {
@@ -19,6 +19,7 @@ func initFlags() {
 func main() {
 	initFlags()
 	now := time.Now()
+	fmt.Println("url: ", url)
 	checkServer(url)
 	duration := time.Since(now)
 	fmt.Println("time: ", duration)
