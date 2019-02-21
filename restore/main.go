@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"os/exec"
+	"strings"
 	"time"
 
 	"k8s.io/perf-tests/clusterloader2/pkg/flags"
@@ -33,8 +34,7 @@ func check_master_node() {
 	cmd := exec.Command("sh")
 	cmd.Stdin = in
 	go func() {
-		in.WriteString("kubectl  get node 10.21.128.13 | grep 10.21.128.13 | awk {'print $2'}")
-		in.WriteString("exit\n")
+		in.WriteString("kubectl  get node 10.21.128.13 | grep 10.21.128.13 | awk {'print $2'}\n")
 	}()
 
 	// cmdStr := "kubectl  get node 10.21.128.13 | grep 10.21.128.13 | awk {'print $2'}"
@@ -47,7 +47,8 @@ func check_master_node() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("in all caps: %q\n", out.String())
+
+	fmt.Printf("in all caps: %q\n", strings.TrimSpace(out.String()))
 }
 
 func checkServer(url string) bool {
