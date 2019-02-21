@@ -69,7 +69,6 @@ steps:
   - namespaceRange:
       min: 1
       max: {{$namespaces}}
-    # replicasPerNamespace: {{$bigRcsPerNamespace}}
     replicasPerNamespace: 1
     tuningSet: RandomizedSaturationTimeLimited
     objectBundle:
