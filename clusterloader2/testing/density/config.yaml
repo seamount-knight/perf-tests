@@ -107,7 +107,7 @@ steps:
     Method: SchedulingThroughput
     Params:
       action: gather
-- name: Creating saturation pods
+# - name: Creating saturation pods
 # # Create latency pods
 # - measurements:
 #   - Identifier: PodStartupLatency
@@ -178,7 +178,7 @@ steps:
   - Identifier: WaitForRunningSaturationRCs
     Method: WaitForControlledPodsRunning
     Params:
-      action: gather
+      action: gather`
 # - name: Deleting saturation pods
 # Collect measurements
 - measurements:
