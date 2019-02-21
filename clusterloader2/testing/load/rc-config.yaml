@@ -89,49 +89,45 @@ steps:
     Params:
       action: gather
 - name: Creating RCs
-# Scale RCs
-- phases:
-  - namespaceRange:
-      min: 1
-      max: {{$namespaces}}
-    replicasPerNamespace: 1
-    tuningSet: RandomizedScalingTimeLimited
-    objectBundle:
-    - basename: big-rc
-      objectTemplatePath: rc.yaml
-      templateFillMap:
-        ReplicasMin: {{MultiplyInt $BIG_GROUP_SIZE 0.5}}}
-        ReplicasMax: {{MultiplyInt $BIG_GROUP_SIZE 0.5}}
-        SvcName: big-service
+# # Scale RCs
+# - phases:
+#   - namespaceRange:
+#       min: 1
+#       max: {{$namespaces}}
+#     replicasPerNamespace: 1
+#     tuningSet: RandomizedScalingTimeLimited
+#     objectBundle:
+#     - basename: big-rc
+#       objectTemplatePath: rc.yaml
+#       templateFillMap:
+#         ReplicasMin: {{MultiplyInt $BIG_GROUP_SIZE 0.5}}}
+#         ReplicasMax: {{MultiplyInt $BIG_GROUP_SIZE 1}}
+#         SvcName: big-service
+
+# - measurements:
+#   - Identifier: WaitForRunningRCs
+#     Method: WaitForControlledPodsRunning
+#     Params:
+#       action: gather
+# - name: Scaling RCs
+# # Scale RCs 2
+# - phases:
+#   - namespaceRange:
+#       min: 1
+#       max: {{$namespaces}}
+#     replicasPerNamespace: 1
+#     tuningSet: RandomizedScalingTimeLimited
+#     objectBundle:
+#     - basename: big-rc
+#       objectTemplatePath: rc.yaml
+#       templateFillMap:
+#         ReplicasMin: {{MultiplyInt $BIG_GROUP_SIZE 1.0}}
+#         ReplicasMax: {{MultiplyInt $BIG_GROUP_SIZE 1.0}}
+#         SvcName: big-service
 
 - measurements:
   - Identifier: WaitForRunningRCs
     Method: WaitForControlledPodsRunning
-    Params:
-      action: gather
-- name: Scaling RCs
-# Scale RCs 2
-- phases:
-  - namespaceRange:
-      min: 1
-      max: {{$namespaces}}
-    replicasPerNamespace: 1
-    tuningSet: RandomizedScalingTimeLimited
-    objectBundle:
-    - basename: big-rc
-      objectTemplatePath: rc.yaml
-      templateFillMap:
-        ReplicasMin: {{MultiplyInt $BIG_GROUP_SIZE 1.0}}
-        ReplicasMax: {{MultiplyInt $BIG_GROUP_SIZE 1.0}}
-        SvcName: big-service
-
-- measurements:
-  - Identifier: WaitForRunningRCs
-    Method: WaitForControlledPodsRunning
-    Params:
-      action: gather
-  - Identifier: Timer
-    Method: Timer
     Params:
       action: gather
 - name: Scaling RCs
@@ -160,3 +156,7 @@ steps:
       action: gather
       masterName: 10.21.128.13
       masterIP: 10.21.128.13
+  - Identifier: Timer
+    Method: Timer
+    Params:
+      action: gather
