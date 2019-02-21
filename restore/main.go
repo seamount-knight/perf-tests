@@ -95,7 +95,7 @@ func checkMasterSvc(cmdstr string) {
 		err := cmd.Run()
 		if err != nil && !flag2 {
 			fmt.Println("err: ", err)
-			time.Sleep(1 * time.Second)
+			time.Sleep(500 * time.Millisecond)
 			flag2 = true
 			now = time.Now()
 			// continue
