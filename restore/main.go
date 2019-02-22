@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"net"
+	"os"
 	"os/exec"
 	"strings"
 	"time"
@@ -35,15 +36,15 @@ func main() {
 	var now time.Time
 	var dura time.Duration
 	for {
-		if isPortClosed(net.IP("10.21.128.13"), kubePort) {
+		if isPortClosed("10.21.128.13", kubePort) {
 			now = time.Now()
 			break
 		}
 		time.Sleep(1 * time.Second)
 	}
 	for {
-		if !isPortClosed(net.IP("10.21.128.13"), kubePort) && !isPortClosed(net.IP("10.21.128.13"), apiserverPort) &&
-			!isPortClosed(net.IP("10.21.128.13"), schedulerPort) && !isPortClosed(net.IP("10.21.128.13"), controlPort) {
+		if !isPortClosed("10.21.128.13", kubePort) && !isPortClosed("10.21.128.13", apiserverPort) &&
+			!isPortClosed("10.21.128.13", schedulerPort) && !isPortClosed("10.21.128.13", controlPort) {
 			dura = time.Since(now)
 			break
 		}
@@ -52,14 +53,16 @@ func main() {
 	fmt.Println("duration: ", dura)
 }
 
-func isPortClosed(ip net.IP, port int) bool {
-
-	tcpAddr := net.TCPAddr{
-		IP:   ip,
-		Port: port,
+func isPortClosed(ip string, port int) bool {
+	tcpAddr, err := net.ResolveTCPAddr("tcp4", fmt.Sprintf("%s:%d", ip, port))
+	if err != nil {
+		fmt.Println(err)
+		time.Sleep(1 * time.Second)
+		os.Exit(1)
 	}
+
 	for {
-		conn, err := net.DialTCP("tcp", nil, &tcpAddr)
+		conn, err := net.DialTCP("tcp4", nil, tcpAddr)
 		if err == nil {
 			fmt.Println("port opening")
 			conn.Close()
@@ -67,7 +70,6 @@ func isPortClosed(ip net.IP, port int) bool {
 
 		} else {
 			fmt.Println("port closed, ", err.Error())
-			time.Sleep(1 * time.Second)
 			return true
 		}
 	}
