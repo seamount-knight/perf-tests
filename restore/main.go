@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"log"
+	"net"
 	"os/exec"
 	"strings"
 	"time"
@@ -17,6 +18,13 @@ var (
 	controlurl  = ""
 )
 
+const (
+	kubePort      = 10250
+	apiserverPort = 6443
+	schedulerPort = 10251
+	controlPort   = 10252
+)
+
 func initFlags() {
 	flags.StringVar(&apiurl, "apiurl", "", "")
 	flags.StringVar(&scheduleurl, "scheduleurl", "", "")
@@ -24,16 +32,66 @@ func initFlags() {
 }
 
 func main() {
-	// cmdStr := "curl -v https://10.21.128.13:6443/healthz --insecure | grep ok\n"
-	// checkMasterSvc(cmdStr)
-	check_node_ready()
+	var now time.Time
+	var dura time.Duration
+	for {
+		if isPortClosed(net.IP("10.21.128.13"), kubePort) {
+			now = time.Now()
+			break
+		}
+		time.Sleep(1 * time.Second)
+	}
+	for {
+		if !isPortClosed(net.IP("10.21.128.13"), kubePort) && !isPortClosed(net.IP("10.21.128.13"), apiserverPort) &&
+			!isPortClosed(net.IP("10.21.128.13"), schedulerPort) && !isPortClosed(net.IP("10.21.128.13"), controlPort) {
+			dura = time.Since(now)
+			break
+		}
+	}
+
+	fmt.Println("duration: ", dura)
+}
+
+func isPortClosed(ip net.IP, port int) bool {
+
+	tcpAddr := net.TCPAddr{
+		IP:   ip,
+		Port: port,
+	}
+	for {
+		conn, err := net.DialTCP("tcp", nil, &tcpAddr)
+		if err == nil {
+			fmt.Println("port opening")
+			conn.Close()
+			return false
+
+		} else {
+			fmt.Println("port closed")
+			time.Sleep(1 * time.Second)
+			return true
+		}
+	}
+}
+
+func delete_node() {
+	in := bytes.NewBuffer(nil)
+	cmd := exec.Command("sh")
+	var out bytes.Buffer
+	cmd.Stdout = &out //输出
+
+	cmd.Stdin = in
+	in.WriteString("kubectl delete node 10.21.128.13\n")
+	err := cmd.Run()
+	if err != nil {
+		log.Fatal(err)
+	}
 }
 
 func check_node_ready() {
 
-	var now time.Time
-	var dura time.Duration
-	now = time.Now()
+	// var now time.Time
+	// var dura time.Duration
+	// now = time.Now()
 
 	for {
 		in := bytes.NewBuffer(nil)
@@ -53,8 +111,8 @@ func check_node_ready() {
 		fmt.Printf("node status: %q\n", status)
 
 		if status == "Ready" {
-			dura = time.Since(now)
-			fmt.Println("duration: ", dura)
+			// dura = time.Since(now)
+			// fmt.Println("duration: ", dura)
 			return
 		}
 
