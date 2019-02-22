@@ -66,7 +66,7 @@ func isPortClosed(ip net.IP, port int) bool {
 			return false
 
 		} else {
-			fmt.Println("port closed")
+			fmt.Println("port closed, ", err.Error())
 			time.Sleep(1 * time.Second)
 			return true
 		}
