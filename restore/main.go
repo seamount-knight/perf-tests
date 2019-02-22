@@ -48,6 +48,7 @@ func main() {
 			dura = time.Since(now)
 			break
 		}
+		time.Sleep(1 * time.Second)
 	}
 
 	fmt.Println("duration: ", dura)
