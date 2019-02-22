@@ -54,6 +54,7 @@ func check_node_ready() {
 
 		if status == "Ready" {
 			dura = time.Since(now)
+			fmt.Println("duration: ", dura)
 			return
 		}
 
@@ -61,7 +62,6 @@ func check_node_ready() {
 			time.Sleep(1 * time.Second)
 		}
 	}
-	fmt.Println("duration: ", dura)
 }
 
 func checkMasterSvc(cmdstr string) {
