@@ -67,3 +67,33 @@ steps:
       kind: ReplicationController
       labelSelector: group = load
       operationTimeout: 15m
+- phases:
+  - namespaceRange:
+      min: 1
+      max: {{$namespaces}}
+    replicasPerNamespace: {{$mediumRcsPerNamespace}}
+    tuningSet: RandomizedSaturationTimeLimited
+    objectBundle:
+    - basename: medium-rc
+      objectTemplatePath: rc.yaml
+      templateFillMap:
+        ReplicasMin: {{$MEDIUM_GROUP_SIZE}}
+        ReplicasMax: {{$MEDIUM_GROUP_SIZE}}
+        SvcName: medium-service
+  - namespaceRange:
+      min: 1
+      max: {{$namespaces}}
+    replicasPerNamespace: {{$smallRcsPerNamespace}}
+    tuningSet: RandomizedSaturationTimeLimited
+    objectBundle:
+    - basename: small-rc
+      objectTemplatePath: rc.yaml
+      templateFillMap:
+        ReplicasMin: {{$SMALL_GROUP_SIZE}}
+        ReplicasMax: {{$SMALL_GROUP_SIZE}}
+        SvcName: small-service
+- measurements:
+  - Identifier: WaitForRunningRCs
+    Method: WaitForControlledPodsRunning
+    Params:
+      action: gather
