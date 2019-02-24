@@ -14,7 +14,8 @@
 # This results in decreased probability of choosing the same node again.
 {{$LATENCY_POD_CPU := DefaultParam .LATENCY_POD_CPU 100}}
 {{$LATENCY_POD_MEMORY := DefaultParam .LATENCY_POD_MEMORY 400}}
-{{$MIN_LATENCY_PODS := 500}}
+# 需要调整 MIN_LATENCY_PODS == Nodes 
+{{$MIN_LATENCY_PODS := 20}}
 {{$MIN_SATURATION_PODS_TIMEOUT := 180}}
 {{$ENABLE_CHAOSMONKEY := DefaultParam .ENABLE_CHAOSMONKEY false}}
 #Variables
@@ -34,14 +35,14 @@ tuningSets:
 - name: Uniform5qps
   qpsLoad:
     qps: 5
-{{if $ENABLE_CHAOSMONKEY}}
-chaosMonkey:
-  nodeFailure:
-    failureRate: 0.01
-    interval: 1m
-    jitterFactor: 10.0
-    simulatedDowntime: 10m
-{{end}}
+# {{if $ENABLE_CHAOSMONKEY}}
+# chaosMonkey:
+#   nodeFailure:
+#     failureRate: 0.01
+#     interval: 1m
+#     jitterFactor: 10.0
+#     simulatedDowntime: 10m
+# {{end}}
 steps:
 - measurements:
   - Identifier: APIResponsiveness
@@ -52,8 +53,8 @@ steps:
     Method: TestMetrics
     Params:
       action: start
-      masterName: 10.21.128.13
-      masterIP: 10.21.128.13
+      masterName: 10.21.128.6
+      masterIP: 10.21.128.6
       nodeMode: {{$NODE_MODE}}
       resourceConstraints: {{$DENSITY_RESOURCE_CONSTRAINTS_FILE}}
 # Create saturation pods
@@ -107,79 +108,79 @@ steps:
     Method: SchedulingThroughput
     Params:
       action: gather
-# - name: Creating saturation pods
-# # Create latency pods
-# - measurements:
-#   - Identifier: PodStartupLatency
-#     Method: PodStartupLatency
-#     Params:
-#       action: start
-#       labelSelector: group = latency
-# - measurements:
-#   - Identifier: WaitForRunningLatencyRCs
-#     Method: WaitForControlledPodsRunning
-#     Params:
-#       action: start
-#       kind: ReplicationController
-#       labelSelector: group = latency
-#       operationTimeout: 15m
-# - phases:
-#   - namespaceRange:
-#       min: 1
-#       max: {{$namespaces}}
-#     replicasPerNamespace: {{$latencyReplicas}}
-#     tuningSet: Uniform5qps
-#     objectBundle:
-#     - basename: latency-pod-rc
-#       objectTemplatePath: rc.yaml
-#       templateFillMap:
-#         Replicas: 1
-#         Group: latency
-#         CpuRequest: {{$LATENCY_POD_CPU}}m
-#         MemoryRequest: {{$LATENCY_POD_MEMORY}}M
-# - measurements:
-#   - Identifier: WaitForRunningLatencyRCs
-#     Method: WaitForControlledPodsRunning
-#     Params:
-#       action: gather
-# - name: Creating latency pods
-# # Remove latency pods
-# - phases:
-#   - namespaceRange:
-#       min: 1
-#       max: {{$namespaces}}
-#     replicasPerNamespace: 0
-#     tuningSet: Uniform5qps
-#     objectBundle:
-#     - basename: latency-pod-rc
-#       objectTemplatePath: rc.yaml
-# - measurements:
-#   - Identifier: WaitForRunningLatencyRCs
-#     Method: WaitForControlledPodsRunning
-#     Params:
-#       action: gather
-# - measurements:
-#   - Identifier: PodStartupLatency
-#     Method: PodStartupLatency
-#     Params:
-#       action: gather
-# - name: Deleting latancy pods
-# Delete pods
-# - phases:
-#   - namespaceRange:
-#       min: 1
-#       max: {{$namespaces}}
-#     replicasPerNamespace: 0
-#     tuningSet: Uniform5qps
-#     objectBundle:
-#     - basename: saturation-rc
-#       objectTemplatePath: rc.yaml
-# - measurements:
-#   - Identifier: WaitForRunningSaturationRCs
-#     Method: WaitForControlledPodsRunning
-#     Params:
-#       action: gather`
-# - name: Deleting saturation pods
+- name: Creating saturation pods
+# Create latency pods
+- measurements:
+  - Identifier: PodStartupLatency
+    Method: PodStartupLatency
+    Params:
+      action: start
+      labelSelector: group = latency
+- measurements:
+  - Identifier: WaitForRunningLatencyRCs
+    Method: WaitForControlledPodsRunning
+    Params:
+      action: start
+      kind: ReplicationController
+      labelSelector: group = latency
+      operationTimeout: 15m
+- phases:
+  - namespaceRange:
+      min: 1
+      max: {{$namespaces}}
+    replicasPerNamespace: {{$latencyReplicas}}
+    tuningSet: Uniform5qps
+    objectBundle:
+    - basename: latency-pod-rc
+      objectTemplatePath: rc.yaml
+      templateFillMap:
+        Replicas: 1
+        Group: latency
+        CpuRequest: {{$LATENCY_POD_CPU}}m
+        MemoryRequest: {{$LATENCY_POD_MEMORY}}M
+- measurements:
+  - Identifier: WaitForRunningLatencyRCs
+    Method: WaitForControlledPodsRunning
+    Params:
+      action: gather
+- name: Creating latency pods
+# Remove latency pods
+- phases:
+  - namespaceRange:
+      min: 1
+      max: {{$namespaces}}
+    replicasPerNamespace: 0
+    tuningSet: Uniform5qps
+    objectBundle:
+    - basename: latency-pod-rc
+      objectTemplatePath: rc.yaml
+- measurements:
+  - Identifier: WaitForRunningLatencyRCs
+    Method: WaitForControlledPodsRunning
+    Params:
+      action: gather
+- measurements:
+  - Identifier: PodStartupLatency
+    Method: PodStartupLatency
+    Params:
+      action: gather
+- name: Deleting latancy pods
+Delete pods
+- phases:
+  - namespaceRange:
+      min: 1
+      max: {{$namespaces}}
+    replicasPerNamespace: 0
+    tuningSet: Uniform5qps
+    objectBundle:
+    - basename: saturation-rc
+      objectTemplatePath: rc.yaml
+- measurements:
+  - Identifier: WaitForRunningSaturationRCs
+    Method: WaitForControlledPodsRunning
+    Params:
+      action: gather`
+- name: Deleting saturation pods
 # Collect measurements
 - measurements:
   - Identifier: APIResponsiveness
@@ -190,5 +191,5 @@ steps:
     Method: TestMetrics
     Params:
       action: gather
-      masterName: 10.21.128.13
-      masterIP: 10.21.128.13
+      masterName: 10.21.128.6
+      masterIP: 10.21.128.6
