@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <testsuite name="ClusterLoaderV2" tests="1" failures="0" errors="0" time="25.139">
-      <testcase name="./testing/load/create-rc.yaml" classname="ClusterLoaderV2" time="25.139310019"></testcase>
+  <testsuite name="ClusterLoaderV2" tests="1" failures="1" errors="0" time="38.899">
+      <testcase name="./testing/load/rc-config.yaml" classname="ClusterLoaderV2" time="38.899340289">
+          <failure type="Failure">:0&#xA;[measurement call TestMetrics - TestMetrics error: [the server could not find the requested resource (delete pods kube-scheduler-10.21.128.6:10251)]&#xA;measurement call TestMetrics - TestMetrics error: [the server could not find the requested resource (get pods kube-scheduler-10.21.128.6:10251)]]&#xA;:0</failure>
+      </testcase>
   </testsuite>
