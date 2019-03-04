@@ -4,8 +4,8 @@
 
 #Constants
 {{$NODE_MODE := DefaultParam .NODE_MODE "allnodes"}}
-{{$NODES_PER_NAMESPACE := DefaultParam .NODES_PER_NAMESPACE 250}}
-{{$PODS_PER_NODE := DefaultParam .PODS_PER_NODE 40}}
+{{$NODES_PER_NAMESPACE := DefaultParam .NODES_PER_NAMESPACE 150}}
+{{$PODS_PER_NODE := DefaultParam .PODS_PER_NODE 20}}
 {{$TEST_THROUGHPUT := DefaultParam .TEST_THROUGHPUT 10}}
 # {{$BIG_GROUP_SIZE := 250}}
 {{$MEDIUM_GROUP_SIZE := 40}}
@@ -58,8 +58,8 @@ steps:
     Params:
       action: start
       nodeMode: {{$NODE_MODE}}
-      masterName: 10.21.128.6
-      masterIP: 10.21.128.6
+      masterName: 10.21.128.13
+      masterIP: 10.21.128.13
 # Create SVCs
 - phases:
   # - namespaceRange:
@@ -184,7 +184,7 @@ steps:
       action: gather
 - name: Scaling RCs
 # Delete RCs
-- phases:
+#- phases:
   # - namespaceRange:
   #     min: 1
   #     max: {{$namespaces}}
@@ -193,30 +193,30 @@ steps:
   #   objectBundle:
   #   - basename: big-rc
   #     objectTemplatePath: rc.yaml
-  - namespaceRange:
-      min: 1
-      max: {{$namespaces}}
-    replicasPerNamespace: 0
-    tuningSet: RandomizedSaturationTimeLimited
-    objectBundle:
-    - basename: medium-rc
-      objectTemplatePath: rc.yaml
-  - namespaceRange:
-      min: 1
-      max: {{$namespaces}}
-    replicasPerNamespace: 0
-    tuningSet: RandomizedSaturationTimeLimited
-    objectBundle:
-    - basename: small-rc
-      objectTemplatePath: rc.yaml
-- name: Deleting RCs
+  #- namespaceRange:
+  #    min: 1
+  #    max: {{$namespaces}}
+  #  replicasPerNamespace: 0
+  #  tuningSet: RandomizedSaturationTimeLimited
+  #  objectBundle:
+  #  - basename: medium-rc
+  #    objectTemplatePath: rc.yaml
+  #- namespaceRange:
+  #    min: 1
+  #    max: {{$namespaces}}
+  #  replicasPerNamespace: 0
+  #  tuningSet: RandomizedSaturationTimeLimited
+  #  objectBundle:
+  #  - basename: small-rc
+  #    objectTemplatePath: rc.yaml
+#- name: Deleting RCs
 - measurements:
   - Identifier: WaitForRunningRCs
     Method: WaitForControlledPodsRunning
     Params:
       action: gather
 # Delete SVCs
-- phases:
+#- phases:
   # - namespaceRange:
   #     min: 1
   #     max: {{$namespaces}}
@@ -225,23 +225,23 @@ steps:
   #   objectBundle:
   #   - basename: big-service
   #     objectTemplatePath: service.yaml
-  - namespaceRange:
-      min: 1
-      max: {{$namespaces}}
-    replicasPerNamespace: 0
-    tuningSet: Sequence
-    objectBundle:
-    - basename: medium-service
-      objectTemplatePath: service.yaml
-  - namespaceRange:
-      min: 1
-      max: {{$namespaces}}
-    replicasPerNamespace: 0
-    tuningSet: Sequence
-    objectBundle:
-    - basename: small-service
-      objectTemplatePath: service.yaml
-- name: Deleting SVCs
+  #- namespaceRange:
+  #    min: 1
+  #    max: {{$namespaces}}
+  #  replicasPerNamespace: 0
+  #  tuningSet: Sequence
+  #  objectBundle:
+  #  - basename: medium-service
+  #    objectTemplatePath: service.yaml
+  #- namespaceRange:
+  #    min: 1
+  #    max: {{$namespaces}}
+  #  replicasPerNamespace: 0
+  #  tuningSet: Sequence
+  #  objectBundle:
+  #  - basename: small-service
+  #    objectTemplatePath: service.yaml
+#- name: Deleting SVCs
 # Collect measurements
 - measurements:
   - Identifier: APIResponsiveness
@@ -252,5 +252,5 @@ steps:
     Method: TestMetrics
     Params:
       action: gather
-      masterName: 10.21.128.6
-      masterIP: 10.21.128.6
+      masterName: 10.21.128.13
+      masterIP: 10.21.128.13

@@ -17,6 +17,7 @@ spec:
       containers:
 #      - image: k8s.gcr.io/pause:3.1
       - image: 	hub.kce.ksyun.com/ksyun/pause:3.1
+        imagePullPolicy: IfNotPresent
         name: {{.Name}}
         resources:
           requests:
