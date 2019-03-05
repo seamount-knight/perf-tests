@@ -4,7 +4,7 @@
 
 #Constants
 {{$NODE_MODE := DefaultParam .NODE_MODE "allnodes"}}
-{{$NODES_PER_NAMESPACE := DefaultParam .NODES_PER_NAMESPACE 150}}
+{{$NODES_PER_NAMESPACE := DefaultParam .NODES_PER_NAMESPACE 50}}
 {{$PODS_PER_NODE := DefaultParam .PODS_PER_NODE 20}}
 {{$TEST_THROUGHPUT := DefaultParam .TEST_THROUGHPUT 10}}
 # {{$BIG_GROUP_SIZE := 250}}
