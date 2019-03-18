@@ -5,7 +5,7 @@
 #Constants
 {{$NODE_MODE := DefaultParam .NODE_MODE "allnodes"}}
 {{$NODES_PER_NAMESPACE := DefaultParam .NODES_PER_NAMESPACE 50}}
-{{$PODS_PER_NODE := DefaultParam .PODS_PER_NODE 20}}
+{{$PODS_PER_NODE := DefaultParam .PODS_PER_NODE 30}}
 {{$TEST_THROUGHPUT := DefaultParam .TEST_THROUGHPUT 10}}
 # {{$BIG_GROUP_SIZE := 250}}
 {{$MEDIUM_GROUP_SIZE := 40}}
@@ -58,8 +58,8 @@ steps:
     Params:
       action: start
       nodeMode: {{$NODE_MODE}}
-      masterName: 10.21.128.13
-      masterIP: 10.21.128.13
+      masterName: 10.21.64.18
+      masterIP: 10.21.64.18
 # Create SVCs
 - phases:
   # - namespaceRange:
@@ -252,5 +252,5 @@ steps:
     Method: TestMetrics
     Params:
       action: gather
-      masterName: 10.21.128.13
-      masterIP: 10.21.128.13
+      masterName: 10.21.64.18
+      masterIP: 10.21.64.18

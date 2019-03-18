@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <testsuite name="ClusterLoaderV2" tests="1" failures="1" errors="0" time="305.129">
+      <testcase name="./testing/density/config.yaml" classname="ClusterLoaderV2" time="305.129789039">
+          <failure type="Failure">:0&#xA;[measurement call APIResponsiveness - APIResponsiveness error: top latency metric: there should be no high-latency requests&#xA;measurement call TestMetrics - TestMetrics error: [unexpected error (code: 0) in ssh connection to master: &amp;errors.errorString{s:&#34;error getting SSH client to root@tawFOFKs3:22: &#39;dial tcp: lookup tawFOFKs3 on 198.18.254.30:53: no such host&#39;&#34;}&#xA;failed to execute curl command on master through SSH: error getting SSH client to root@tawFOFKs3:22: &#39;dial tcp: lookup tawFOFKs3 on 198.18.254.30:53: no such host&#39;&#xA;failed to execute curl command on master through SSH: error getting SSH client to root@tawFOFKs3:22: &#39;dial tcp: lookup tawFOFKs3 on 198.18.254.30:53: no such host&#39;&#xA;failed to execute curl command on master through SSH: error getting SSH client to root@tawFOFKs3:22: &#39;dial tcp: lookup tawFOFKs3 on 198.18.254.30:53: no such host&#39;]]&#xA;:0</failure>
+      </testcase>
+  </testsuite>
