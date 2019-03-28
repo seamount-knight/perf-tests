@@ -4,12 +4,12 @@
 
 #Constants
 {{$NODE_MODE := DefaultParam .NODE_MODE "allnodes"}}
-{{$NODES_PER_NAMESPACE := DefaultParam .NODES_PER_NAMESPACE 50}}
+{{$NODES_PER_NAMESPACE := DefaultParam .NODES_PER_NAMESPACE 100}}
 {{$PODS_PER_NODE := DefaultParam .PODS_PER_NODE 30}}
 {{$TEST_THROUGHPUT := DefaultParam .TEST_THROUGHPUT 10}}
-# {{$BIG_GROUP_SIZE := 250}}
-{{$MEDIUM_GROUP_SIZE := 40}}
-{{$SMALL_GROUP_SIZE := 10}}
+{{$BIG_GROUP_SIZE := 250}}
+{{$MEDIUM_GROUP_SIZE := 30}}
+{{$SMALL_GROUP_SIZE := 5}}
 {{$ENABLE_CHAOSMONKEY := DefaultParam .ENABLE_CHAOSMONKEY false}}
 
 #Variables
@@ -17,9 +17,9 @@
 {{$totalPods := MultiplyInt $namespaces $NODES_PER_NAMESPACE $PODS_PER_NODE}}
 {{$saturationTime := DivideInt $totalPods $TEST_THROUGHPUT}}
 # bigRCs - 1/4 of namespace pods should be in big RCs.
-# {{$bigRcsPerNamespace := DivideInt (MultiplyInt $NODES_PER_NAMESPACE $PODS_PER_NODE) (MultiplyInt 4 $BIG_GROUP_SIZE)}}
+ {{$bigRcsPerNamespace := DivideInt (MultiplyInt $NODES_PER_NAMESPACE $PODS_PER_NODE) (MultiplyInt 4 $BIG_GROUP_SIZE)}}
 # mediumRCs - 1/4 of namespace pods should be in medium RCs.
-{{$mediumRcsPerNamespace := DivideInt (MultiplyInt $NODES_PER_NAMESPACE $PODS_PER_NODE) (MultiplyInt 2 $MEDIUM_GROUP_SIZE)}}
+{{$mediumRcsPerNamespace := DivideInt (MultiplyInt $NODES_PER_NAMESPACE $PODS_PER_NODE) (MultiplyInt 4 $MEDIUM_GROUP_SIZE)}}
 # smallRCs - 1/2 of namespace pods should be in small RCs.
 {{$smallRcsPerNamespace := DivideInt (MultiplyInt $NODES_PER_NAMESPACE $PODS_PER_NODE) (MultiplyInt 2 $SMALL_GROUP_SIZE)}}
 
@@ -62,14 +62,14 @@ steps:
       masterIP: 10.21.64.18
 # Create SVCs
 - phases:
-  # - namespaceRange:
-  #     min: 1
-  #     max: {{$namespaces}}
-  #   replicasPerNamespace: {{DivideInt (AddInt $bigRcsPerNamespace 1) 2}}
-  #   tuningSet: Sequence
-  #   objectBundle:
-  #   - basename: big-service
-  #     objectTemplatePath: service.yaml
+  - namespaceRange:
+      min: 1
+      max: {{$namespaces}}
+    replicasPerNamespace: {{DivideInt (AddInt $bigRcsPerNamespace 1) 2}}
+    tuningSet: Sequence
+    objectBundle:
+    - basename: big-service
+      objectTemplatePath: service.yaml
   - namespaceRange:
       min: 1
       max: {{$namespaces}}
@@ -97,18 +97,18 @@ steps:
       labelSelector: group = load
       operationTimeout: 15m
 - phases:
-  # - namespaceRange:
-  #     min: 1
-  #     max: {{$namespaces}}
-  #   replicasPerNamespace: {{$bigRcsPerNamespace}}
-  #   tuningSet: RandomizedSaturationTimeLimited
-  #   objectBundle:
-  #   - basename: big-rc
-  #     objectTemplatePath: rc.yaml
-  #     templateFillMap:
-  #       ReplicasMin: {{$BIG_GROUP_SIZE}}
-  #       ReplicasMax: {{$BIG_GROUP_SIZE}}
-  #       SvcName: big-service
+  - namespaceRange:
+      min: 1
+      max: {{$namespaces}}
+    replicasPerNamespace: {{$bigRcsPerNamespace}}
+    tuningSet: RandomizedSaturationTimeLimited
+    objectBundle:
+    - basename: big-rc
+      objectTemplatePath: rc.yaml
+      templateFillMap:
+        ReplicasMin: {{$BIG_GROUP_SIZE}}
+        ReplicasMax: {{$BIG_GROUP_SIZE}}
+        SvcName: big-service
   - namespaceRange:
       min: 1
       max: {{$namespaces}}
@@ -141,18 +141,18 @@ steps:
 - name: Creating RCs
 # Scale RCs
 - phases:
-  # - namespaceRange:
-  #     min: 1
-  #     max: {{$namespaces}}
-  #   replicasPerNamespace: {{$bigRcsPerNamespace}}
-  #   tuningSet: RandomizedScalingTimeLimited
-  #   objectBundle:
-  #   - basename: big-rc
-  #     objectTemplatePath: rc.yaml
-  #     templateFillMap:
-  #       ReplicasMin: {{MultiplyInt $BIG_GROUP_SIZE 0.5}}
-  #       ReplicasMax: {{MultiplyInt $BIG_GROUP_SIZE 1.5}}
-  #       SvcName: big-service
+  - namespaceRange:
+      min: 1
+      max: {{$namespaces}}
+    replicasPerNamespace: {{$bigRcsPerNamespace}}
+    tuningSet: RandomizedScalingTimeLimited
+    objectBundle:
+    - basename: big-rc
+      objectTemplatePath: rc.yaml
+      templateFillMap:
+        ReplicasMin: {{MultiplyInt $BIG_GROUP_SIZE 0.5}}
+        ReplicasMax: {{MultiplyInt $BIG_GROUP_SIZE 1.5}}
+        SvcName: big-service
   - namespaceRange:
       min: 1
       max: {{$namespaces}}

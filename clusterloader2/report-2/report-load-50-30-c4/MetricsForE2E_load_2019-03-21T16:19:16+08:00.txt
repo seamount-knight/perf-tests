@@ -1,0 +1,7392 @@
+{
+  "ApiServerMetrics": {
+    "apiserver_request_count": [
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "Go-http-client/2.0",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "clusterinformations",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "48"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "Go-http-client/2.0",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "clusterinformations",
+          "scope": "resource",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "586"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "Go-http-client/2.0",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "felixconfigurations",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "43"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "Go-http-client/2.0",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "globalnetworkpolicies",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "42"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "Go-http-client/2.0",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "globalnetworksets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "44"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "Go-http-client/2.0",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "hostendpoints",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "46"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "Go-http-client/2.0",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "ippools",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "47"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "Go-http-client/2.0",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "networkpolicies",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "44"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "calico-felix/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "networkpolicies",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "44"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "calico/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "518"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "calico/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "1104"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "calico/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "518"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "clusterloader/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "replicationcontrollers",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "163"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "clusterloader/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "replicationcontrollers",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "163"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "clusterloader/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "3"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "clusterloader/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "299"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "clusterloader/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "replicationcontrollers",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "4"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "clusterloader/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "299"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "clusterloader/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "200",
+          "contentType": "text/plain; charset=utf-8",
+          "resource": "pods",
+          "scope": "resource",
+          "subresource": "proxy",
+          "verb": "CONNECT"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "clusterloader/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "200",
+          "contentType": "text/plain; version=0.0.4",
+          "resource": "pods",
+          "scope": "resource",
+          "subresource": "proxy",
+          "verb": "CONNECT"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "clusterloader/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "201",
+          "contentType": "application/json",
+          "resource": "replicationcontrollers",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "163"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "clusterloader/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "201",
+          "contentType": "application/json",
+          "resource": "services",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "82"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "demon/v1.8.3+f0efb3cb88375 (linux/amd64) kubernetes/f0efb3c",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "103"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "demon/v1.8.3+f0efb3cb88375 (linux/amd64) kubernetes/f0efb3c",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "107"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "flanneld/v1.6.7 (linux/amd64) kubernetes/$Format",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "10"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-apiserver/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "apiservices",
+          "scope": "cluster",
+          "subresource": "status",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "232"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-apiserver/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "limitranges",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "7"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-apiserver/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "namespaces",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "28"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-apiserver/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "resourcequotas",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "7"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-apiserver/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "secrets",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "51"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-apiserver/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "serviceaccounts",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "51"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-apiserver/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "services",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "2"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-apiserver/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "services",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "22"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-apiserver/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "clusterrolebindings",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-apiserver/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "limitranges",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-apiserver/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "namespaces",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "2"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-apiserver/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "resourcequotas",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-apiserver/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "secrets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "2"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-apiserver/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "services",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/cronjob-controller",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "cronjobs",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "22"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/cronjob-controller",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "jobs",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "22"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/deployment-controller",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "deployments",
+          "scope": "namespace",
+          "subresource": "status",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "2"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/endpoint-controller",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "endpoints",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "1716"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/endpoint-controller",
+          "code": "201",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "endpoints",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "82"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/endpoint-controller",
+          "code": "409",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "endpoints",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "149"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/generic-garbage-collector",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "apiservices",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/generic-garbage-collector",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "hostendpoints",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/generic-garbage-collector",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "networkpolicies",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "2"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/leader-election",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "endpoints",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "22"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/leader-election",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "endpoints",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "22"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/pod-garbage-collector",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "11"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/replicaset-controller",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "replicasets",
+          "scope": "namespace",
+          "subresource": "status",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "2"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/replication-controller",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "events",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "195"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/replication-controller",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "DELETE"
+        },
+        "value": [
+          0,
+          "218"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/replication-controller",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "replicationcontrollers",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "169"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/replication-controller",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "replicationcontrollers",
+          "scope": "namespace",
+          "subresource": "status",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "1066"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/replication-controller",
+          "code": "201",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "events",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "1063"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/replication-controller",
+          "code": "201",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "1558"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/replication-controller",
+          "code": "409",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "replicationcontrollers",
+          "scope": "namespace",
+          "subresource": "status",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "169"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/service-account-controller",
+          "code": "201",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "serviceaccounts",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/shared-informers",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "certificatesigningrequests",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/shared-informers",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "controllerrevisions",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/shared-informers",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "cronjobs",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/shared-informers",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "deployments",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "2"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/shared-informers",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "jobs",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/shared-informers",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "namespaces",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/shared-informers",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "poddisruptionbudgets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/shared-informers",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "pods",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/shared-informers",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "podsecuritypolicies",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/shared-informers",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "replicasets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "2"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/shared-informers",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "resourcequotas",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/shared-informers",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "secrets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/shared-informers",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "statefulsets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/shared-informers",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "volumeattachments",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/tokens-controller",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "serviceaccounts",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/tokens-controller",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "serviceaccounts",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-controller-manager/v1.12.3 (linux/amd64) kubernetes/435f92c/tokens-controller",
+          "code": "201",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "secrets",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-proxy/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "endpoints",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "10"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-proxy/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "services",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "8"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-scheduler/v1.12.3 (linux/amd64) kubernetes/435f92c/leader-election",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "endpoints",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "22"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-scheduler/v1.12.3 (linux/amd64) kubernetes/435f92c/leader-election",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "endpoints",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "22"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-scheduler/v1.12.3 (linux/amd64) kubernetes/435f92c/scheduler",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-scheduler/v1.12.3 (linux/amd64) kubernetes/435f92c/scheduler",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "persistentvolumeclaims",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-scheduler/v1.12.3 (linux/amd64) kubernetes/435f92c/scheduler",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "poddisruptionbudgets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-scheduler/v1.12.3 (linux/amd64) kubernetes/435f92c/scheduler",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "pods",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-scheduler/v1.12.3 (linux/amd64) kubernetes/435f92c/scheduler",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "replicationcontrollers",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-scheduler/v1.12.3 (linux/amd64) kubernetes/435f92c/scheduler",
+          "code": "201",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "events",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "1558"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kube-scheduler/v1.12.3 (linux/amd64) kubernetes/435f92c/scheduler",
+          "code": "201",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "binding",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "1558"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kubelet/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "244"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kubelet/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "6"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kubelet/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "status",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "244"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kubelet/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "pods",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "7"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kubelet/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "DELETE"
+        },
+        "value": [
+          0,
+          "53"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kubelet/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "850"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kubelet/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "status",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "850"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kubelet/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "secrets",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "10"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kubelet/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "services",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "6"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kubelet/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "configmaps",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "4"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kubelet/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "20"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kubelet/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "pods",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "20"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kubelet/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "secrets",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "19"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kubelet/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "200",
+          "contentType": "application/vnd.kubernetes.protobuf;stream=watch",
+          "resource": "services",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "17"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kubelet/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "201",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "events",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "1037"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kubelet/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "404",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "48"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "kubelet/v1.12.3 (linux/amd64) kubernetes/435f92c",
+          "code": "404",
+          "contentType": "application/vnd.kubernetes.protobuf",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "37"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "metrics-server/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "metrics-server/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "pods",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "metrics-server/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "201",
+          "contentType": "application/json",
+          "resource": "subjectaccessreviews",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "33"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "traefik/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "endpoints",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "10"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "traefik/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "ingresses",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "7"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "traefik/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "secrets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "11"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_count",
+          "client": "traefik/v0.0.0 (linux/amd64) kubernetes/$Format",
+          "code": "200",
+          "contentType": "application/json",
+          "resource": "services",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "8"
+        ]
+      }
+    ],
+    "apiserver_request_latencies_summary": [
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "apiservices",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "431000259"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "apiservices",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "431000259"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "apiservices",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "431000259"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "apiservices",
+          "scope": "cluster",
+          "subresource": "status",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "2371"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "apiservices",
+          "scope": "cluster",
+          "subresource": "status",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "4902"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "apiservices",
+          "scope": "cluster",
+          "subresource": "status",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "7321"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "certificatesigningrequests",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "313000290"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "certificatesigningrequests",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "313000290"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "certificatesigningrequests",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "313000290"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "clusterinformations",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "88019919"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "clusterinformations",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "111109981"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "clusterinformations",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "118518687"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "clusterinformations",
+          "scope": "resource",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "1097"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "clusterinformations",
+          "scope": "resource",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "4071"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "clusterinformations",
+          "scope": "resource",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "12585"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "clusterrolebindings",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "411000282"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "clusterrolebindings",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "411000282"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "clusterrolebindings",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "411000282"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "configmaps",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "352001410"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "configmaps",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "507000308"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "configmaps",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "507000308"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "controllerrevisions",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "477000291"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "controllerrevisions",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "477000291"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "controllerrevisions",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "477000291"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "cronjobs",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "1223"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "cronjobs",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "6785"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "cronjobs",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "8671"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "cronjobs",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "515000296"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "cronjobs",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "515000296"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "cronjobs",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "515000296"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "deployments",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "357000259"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "deployments",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "357000259"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "deployments",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "357000259"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "deployments",
+          "scope": "namespace",
+          "subresource": "status",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "2232"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "deployments",
+          "scope": "namespace",
+          "subresource": "status",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "2232"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "deployments",
+          "scope": "namespace",
+          "subresource": "status",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "2232"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "endpoints",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "519000226"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "endpoints",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "584000203"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "endpoints",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "592000192"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "endpoints",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "1428"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "endpoints",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "4163"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "endpoints",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "7847"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "endpoints",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "2045"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "endpoints",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "5399"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "endpoints",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "18333"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "endpoints",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "4227"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "endpoints",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "11266"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "endpoints",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "28452"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "events",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "3007"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "events",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "6816"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "events",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "11427"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "events",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "2294"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "events",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "5755"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "events",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "14241"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "felixconfigurations",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "85669485"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "felixconfigurations",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "111923446"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "felixconfigurations",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "117040648"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "globalnetworkpolicies",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "91165426"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "globalnetworkpolicies",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "111963013"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "globalnetworkpolicies",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "115806354"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "globalnetworksets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "85245652"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "globalnetworksets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "110764096"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "globalnetworksets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "115442842"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "hostendpoints",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "90134192"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "hostendpoints",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "111701383"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "hostendpoints",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "119596521"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "ingresses",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "348000263"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "ingresses",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "547000875"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "ingresses",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "547000875"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "ippools",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "81075286"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "ippools",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "114287774"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "ippools",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "117856999"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "jobs",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "1450"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "jobs",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "2730"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "jobs",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "3170"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "jobs",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "445001937"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "jobs",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "445001937"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "jobs",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "445001937"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "limitranges",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "334000254"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "limitranges",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "334000254"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "limitranges",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "334000254"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "limitranges",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "1219"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "limitranges",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "2113"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "limitranges",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "2113"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "namespaces",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "1160"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "namespaces",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "3937"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "namespaces",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "4818"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "namespaces",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "352004477"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "namespaces",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "467000262"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "namespaces",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "467000262"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "networkpolicies",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "95314580"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "networkpolicies",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "115088693"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "networkpolicies",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "309000252"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "1322"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "4485"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "15931"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "7158"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "9673"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "14317"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "3294"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "9627"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "14600"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "403000217"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "565000236"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "590000373"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "status",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "3684"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "status",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "8077"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "nodes",
+          "scope": "cluster",
+          "subresource": "status",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "20068"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "persistentvolumeclaims",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "353000280"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "persistentvolumeclaims",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "353000280"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "persistentvolumeclaims",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "353000280"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "poddisruptionbudgets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "391000280"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "poddisruptionbudgets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "391000280"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "poddisruptionbudgets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "391000280"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "pods",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "1593"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "pods",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "3067"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "pods",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "3067"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "pods",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "9010370"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "pods",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "422000769"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "pods",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "546000834"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "DELETE"
+        },
+        "value": [
+          0,
+          "5234"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "DELETE"
+        },
+        "value": [
+          0,
+          "15014"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "DELETE"
+        },
+        "value": [
+          0,
+          "33253"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "1468"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "5609"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "15834"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "1663"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "3839"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "7156"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "4763"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "10189"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "20919"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "2633"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "6955"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "19964"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "10044867"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "30038046"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "40040728"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "binding",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "2736"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "binding",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "6998"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "binding",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "15159"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "status",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "3082"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "status",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "7182"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "pods",
+          "scope": "namespace",
+          "subresource": "status",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "19692"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "pods",
+          "scope": "resource",
+          "subresource": "proxy",
+          "verb": "CONNECT"
+        },
+        "value": [
+          0,
+          "7102"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "pods",
+          "scope": "resource",
+          "subresource": "proxy",
+          "verb": "CONNECT"
+        },
+        "value": [
+          0,
+          "7102"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "pods",
+          "scope": "resource",
+          "subresource": "proxy",
+          "verb": "CONNECT"
+        },
+        "value": [
+          0,
+          "7102"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "podsecuritypolicies",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "571000242"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "podsecuritypolicies",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "571000242"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "podsecuritypolicies",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "571000242"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "replicasets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "557000257"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "replicasets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "557000257"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "replicasets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "557000257"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "replicasets",
+          "scope": "namespace",
+          "subresource": "status",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "2443"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "replicasets",
+          "scope": "namespace",
+          "subresource": "status",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "2443"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "replicasets",
+          "scope": "namespace",
+          "subresource": "status",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "2443"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "replicationcontrollers",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "9155"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "replicationcontrollers",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "10249"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "replicationcontrollers",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "10249"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "replicationcontrollers",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "511000934"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "replicationcontrollers",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "511000934"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "replicationcontrollers",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "511000934"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "replicationcontrollers",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "1292"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "replicationcontrollers",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "5219"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "replicationcontrollers",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "12480"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "replicationcontrollers",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "2744"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "replicationcontrollers",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "7190"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "replicationcontrollers",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PATCH"
+        },
+        "value": [
+          0,
+          "13390"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "replicationcontrollers",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "2421"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "replicationcontrollers",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "6572"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "replicationcontrollers",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "18475"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "replicationcontrollers",
+          "scope": "namespace",
+          "subresource": "status",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "2197"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "replicationcontrollers",
+          "scope": "namespace",
+          "subresource": "status",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "5543"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "replicationcontrollers",
+          "scope": "namespace",
+          "subresource": "status",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "15688"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "resourcequotas",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "310000236"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "resourcequotas",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "310000236"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "resourcequotas",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "310000236"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "resourcequotas",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "1168"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "resourcequotas",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "1576"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "resourcequotas",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "1576"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "secrets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "482000230"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "secrets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "579000269"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "secrets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "583000193"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "secrets",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "1226"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "secrets",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "3008"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "secrets",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "5042"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "secrets",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "2882"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "secrets",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "5048"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "secrets",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "5048"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "secrets",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "5444"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "secrets",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "5444"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "secrets",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "5444"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "secrets",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "487000210"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "secrets",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "582000313"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "secrets",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "596000216"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "serviceaccounts",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "1155"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "serviceaccounts",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "2357"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "serviceaccounts",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "4174"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "serviceaccounts",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "3847"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "serviceaccounts",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "3847"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "serviceaccounts",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "3847"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "serviceaccounts",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "1750"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "serviceaccounts",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "1750"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "serviceaccounts",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "PUT"
+        },
+        "value": [
+          0,
+          "1750"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "services",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "1544"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "services",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "2848"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "services",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "LIST"
+        },
+        "value": [
+          0,
+          "2848"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "services",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "366000304"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "services",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "547000273"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "services",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "558000265"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "services",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "1166"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "services",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "2296"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "services",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "4065"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "services",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "7112"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "services",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "14918"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "services",
+          "scope": "namespace",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "34358"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "statefulsets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "504000337"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "statefulsets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "504000337"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "statefulsets",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "504000337"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "subjectaccessreviews",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "268"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "subjectaccessreviews",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "365"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "subjectaccessreviews",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "POST"
+        },
+        "value": [
+          0,
+          "471"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.5",
+          "resource": "volumeattachments",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "586003840"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.9",
+          "resource": "volumeattachments",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "586003840"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_request_latencies_summary",
+          "quantile": "0.99",
+          "resource": "volumeattachments",
+          "scope": "cluster",
+          "subresource": "",
+          "verb": "WATCH"
+        },
+        "value": [
+          0,
+          "586003840"
+        ]
+      }
+    ],
+    "etcd_helper_cache_entry_count": [
+      {
+        "metric": {
+          "__name__": "etcd_helper_cache_entry_count"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "etcd_helper_cache_hit_count": [
+      {
+        "metric": {
+          "__name__": "etcd_helper_cache_hit_count"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "etcd_helper_cache_miss_count": [
+      {
+        "metric": {
+          "__name__": "etcd_helper_cache_miss_count"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "etcd_request_cache_add_latencies_summary": [
+      {
+        "metric": {
+          "__name__": "etcd_request_cache_add_latencies_summary",
+          "quantile": "0.5"
+        },
+        "value": [
+          0,
+          "NaN"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "etcd_request_cache_add_latencies_summary",
+          "quantile": "0.9"
+        },
+        "value": [
+          0,
+          "NaN"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "etcd_request_cache_add_latencies_summary",
+          "quantile": "0.99"
+        },
+        "value": [
+          0,
+          "NaN"
+        ]
+      }
+    ],
+    "etcd_request_cache_get_latencies_summary": [
+      {
+        "metric": {
+          "__name__": "etcd_request_cache_get_latencies_summary",
+          "quantile": "0.5"
+        },
+        "value": [
+          0,
+          "NaN"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "etcd_request_cache_get_latencies_summary",
+          "quantile": "0.9"
+        },
+        "value": [
+          0,
+          "NaN"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "etcd_request_cache_get_latencies_summary",
+          "quantile": "0.99"
+        },
+        "value": [
+          0,
+          "NaN"
+        ]
+      }
+    ],
+    "etcd_request_latencies_summary": null
+  },
+  "ControllerManagerMetrics": {
+    "garbage_collector_attempt_to_delete_queue_latency": null,
+    "garbage_collector_attempt_to_delete_work_duration": null,
+    "garbage_collector_attempt_to_orphan_queue_latency": null,
+    "garbage_collector_attempt_to_orphan_work_duration": null,
+    "garbage_collector_dirty_processing_latency_microseconds": null,
+    "garbage_collector_event_processing_latency_microseconds": null,
+    "garbage_collector_graph_changes_queue_latency": null,
+    "garbage_collector_graph_changes_work_duration": null,
+    "garbage_collector_orphan_processing_latency_microseconds": null,
+    "namespace_queue_latency": null,
+    "namespace_queue_latency_count": null,
+    "namespace_queue_latency_sum": null,
+    "namespace_retries": null,
+    "namespace_work_duration": null,
+    "namespace_work_duration_count": null,
+    "namespace_work_duration_sum": null
+  },
+  "KubeletMetrics": {},
+  "SchedulerMetrics": {
+    "apiserver_audit_event_total": [
+      {
+        "metric": {
+          "__name__": "apiserver_audit_event_total"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "apiserver_client_certificate_expiration_seconds_bucket": [
+      {
+        "metric": {
+          "__name__": "apiserver_client_certificate_expiration_seconds_bucket",
+          "le": "0"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_client_certificate_expiration_seconds_bucket",
+          "le": "21600"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_client_certificate_expiration_seconds_bucket",
+          "le": "43200"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_client_certificate_expiration_seconds_bucket",
+          "le": "86400"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_client_certificate_expiration_seconds_bucket",
+          "le": "172800"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_client_certificate_expiration_seconds_bucket",
+          "le": "345600"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_client_certificate_expiration_seconds_bucket",
+          "le": "604800"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_client_certificate_expiration_seconds_bucket",
+          "le": "2.592e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_client_certificate_expiration_seconds_bucket",
+          "le": "7.776e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_client_certificate_expiration_seconds_bucket",
+          "le": "1.5552e+07"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_client_certificate_expiration_seconds_bucket",
+          "le": "3.1104e+07"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_client_certificate_expiration_seconds_bucket",
+          "le": "+Inf"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "apiserver_client_certificate_expiration_seconds_count": [
+      {
+        "metric": {
+          "__name__": "apiserver_client_certificate_expiration_seconds_count"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "apiserver_client_certificate_expiration_seconds_sum": [
+      {
+        "metric": {
+          "__name__": "apiserver_client_certificate_expiration_seconds_sum"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "apiserver_storage_data_key_generation_failures_total": [
+      {
+        "metric": {
+          "__name__": "apiserver_storage_data_key_generation_failures_total"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "apiserver_storage_data_key_generation_latencies_microseconds_bucket": [
+      {
+        "metric": {
+          "__name__": "apiserver_storage_data_key_generation_latencies_microseconds_bucket",
+          "le": "5"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_storage_data_key_generation_latencies_microseconds_bucket",
+          "le": "10"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_storage_data_key_generation_latencies_microseconds_bucket",
+          "le": "20"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_storage_data_key_generation_latencies_microseconds_bucket",
+          "le": "40"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_storage_data_key_generation_latencies_microseconds_bucket",
+          "le": "80"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_storage_data_key_generation_latencies_microseconds_bucket",
+          "le": "160"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_storage_data_key_generation_latencies_microseconds_bucket",
+          "le": "320"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_storage_data_key_generation_latencies_microseconds_bucket",
+          "le": "640"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_storage_data_key_generation_latencies_microseconds_bucket",
+          "le": "1280"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_storage_data_key_generation_latencies_microseconds_bucket",
+          "le": "2560"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_storage_data_key_generation_latencies_microseconds_bucket",
+          "le": "5120"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_storage_data_key_generation_latencies_microseconds_bucket",
+          "le": "10240"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_storage_data_key_generation_latencies_microseconds_bucket",
+          "le": "20480"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_storage_data_key_generation_latencies_microseconds_bucket",
+          "le": "40960"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "apiserver_storage_data_key_generation_latencies_microseconds_bucket",
+          "le": "+Inf"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "apiserver_storage_data_key_generation_latencies_microseconds_count": [
+      {
+        "metric": {
+          "__name__": "apiserver_storage_data_key_generation_latencies_microseconds_count"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "apiserver_storage_data_key_generation_latencies_microseconds_sum": [
+      {
+        "metric": {
+          "__name__": "apiserver_storage_data_key_generation_latencies_microseconds_sum"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "apiserver_storage_envelope_transformation_cache_misses_total": [
+      {
+        "metric": {
+          "__name__": "apiserver_storage_envelope_transformation_cache_misses_total"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "go_gc_duration_seconds": [
+      {
+        "metric": {
+          "__name__": "go_gc_duration_seconds",
+          "quantile": "0"
+        },
+        "value": [
+          0,
+          "0.00003905"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "go_gc_duration_seconds",
+          "quantile": "0.25"
+        },
+        "value": [
+          0,
+          "0.000087984"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "go_gc_duration_seconds",
+          "quantile": "0.5"
+        },
+        "value": [
+          0,
+          "0.00013698"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "go_gc_duration_seconds",
+          "quantile": "0.75"
+        },
+        "value": [
+          0,
+          "0.00025298"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "go_gc_duration_seconds",
+          "quantile": "1"
+        },
+        "value": [
+          0,
+          "0.00800065"
+        ]
+      }
+    ],
+    "go_gc_duration_seconds_count": [
+      {
+        "metric": {
+          "__name__": "go_gc_duration_seconds_count"
+        },
+        "value": [
+          0,
+          "50"
+        ]
+      }
+    ],
+    "go_gc_duration_seconds_sum": [
+      {
+        "metric": {
+          "__name__": "go_gc_duration_seconds_sum"
+        },
+        "value": [
+          0,
+          "0.026373279"
+        ]
+      }
+    ],
+    "go_goroutines": [
+      {
+        "metric": {
+          "__name__": "go_goroutines"
+        },
+        "value": [
+          0,
+          "141"
+        ]
+      }
+    ],
+    "go_memstats_alloc_bytes": [
+      {
+        "metric": {
+          "__name__": "go_memstats_alloc_bytes"
+        },
+        "value": [
+          0,
+          "17941632"
+        ]
+      }
+    ],
+    "go_memstats_alloc_bytes_total": [
+      {
+        "metric": {
+          "__name__": "go_memstats_alloc_bytes_total"
+        },
+        "value": [
+          0,
+          "380574968"
+        ]
+      }
+    ],
+    "go_memstats_buck_hash_sys_bytes": [
+      {
+        "metric": {
+          "__name__": "go_memstats_buck_hash_sys_bytes"
+        },
+        "value": [
+          0,
+          "1497442"
+        ]
+      }
+    ],
+    "go_memstats_frees_total": [
+      {
+        "metric": {
+          "__name__": "go_memstats_frees_total"
+        },
+        "value": [
+          0,
+          "3999171"
+        ]
+      }
+    ],
+    "go_memstats_gc_cpu_fraction": [
+      {
+        "metric": {
+          "__name__": "go_memstats_gc_cpu_fraction"
+        },
+        "value": [
+          0,
+          "0.00005056828083931014"
+        ]
+      }
+    ],
+    "go_memstats_gc_sys_bytes": [
+      {
+        "metric": {
+          "__name__": "go_memstats_gc_sys_bytes"
+        },
+        "value": [
+          0,
+          "1642496"
+        ]
+      }
+    ],
+    "go_memstats_heap_alloc_bytes": [
+      {
+        "metric": {
+          "__name__": "go_memstats_heap_alloc_bytes"
+        },
+        "value": [
+          0,
+          "17941632"
+        ]
+      }
+    ],
+    "go_memstats_heap_idle_bytes": [
+      {
+        "metric": {
+          "__name__": "go_memstats_heap_idle_bytes"
+        },
+        "value": [
+          0,
+          "6414336"
+        ]
+      }
+    ],
+    "go_memstats_heap_inuse_bytes": [
+      {
+        "metric": {
+          "__name__": "go_memstats_heap_inuse_bytes"
+        },
+        "value": [
+          0,
+          "29958144"
+        ]
+      }
+    ],
+    "go_memstats_heap_objects": [
+      {
+        "metric": {
+          "__name__": "go_memstats_heap_objects"
+        },
+        "value": [
+          0,
+          "175803"
+        ]
+      }
+    ],
+    "go_memstats_heap_released_bytes": [
+      {
+        "metric": {
+          "__name__": "go_memstats_heap_released_bytes"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "go_memstats_heap_sys_bytes": [
+      {
+        "metric": {
+          "__name__": "go_memstats_heap_sys_bytes"
+        },
+        "value": [
+          0,
+          "36372480"
+        ]
+      }
+    ],
+    "go_memstats_last_gc_time_seconds": [
+      {
+        "metric": {
+          "__name__": "go_memstats_last_gc_time_seconds"
+        },
+        "value": [
+          0,
+          "1553156356.0361063"
+        ]
+      }
+    ],
+    "go_memstats_lookups_total": [
+      {
+        "metric": {
+          "__name__": "go_memstats_lookups_total"
+        },
+        "value": [
+          0,
+          "675"
+        ]
+      }
+    ],
+    "go_memstats_mallocs_total": [
+      {
+        "metric": {
+          "__name__": "go_memstats_mallocs_total"
+        },
+        "value": [
+          0,
+          "4174974"
+        ]
+      }
+    ],
+    "go_memstats_mcache_inuse_bytes": [
+      {
+        "metric": {
+          "__name__": "go_memstats_mcache_inuse_bytes"
+        },
+        "value": [
+          0,
+          "6944"
+        ]
+      }
+    ],
+    "go_memstats_mcache_sys_bytes": [
+      {
+        "metric": {
+          "__name__": "go_memstats_mcache_sys_bytes"
+        },
+        "value": [
+          0,
+          "16384"
+        ]
+      }
+    ],
+    "go_memstats_mspan_inuse_bytes": [
+      {
+        "metric": {
+          "__name__": "go_memstats_mspan_inuse_bytes"
+        },
+        "value": [
+          0,
+          "580184"
+        ]
+      }
+    ],
+    "go_memstats_mspan_sys_bytes": [
+      {
+        "metric": {
+          "__name__": "go_memstats_mspan_sys_bytes"
+        },
+        "value": [
+          0,
+          "589824"
+        ]
+      }
+    ],
+    "go_memstats_next_gc_bytes": [
+      {
+        "metric": {
+          "__name__": "go_memstats_next_gc_bytes"
+        },
+        "value": [
+          0,
+          "33967248"
+        ]
+      }
+    ],
+    "go_memstats_other_sys_bytes": [
+      {
+        "metric": {
+          "__name__": "go_memstats_other_sys_bytes"
+        },
+        "value": [
+          0,
+          "941974"
+        ]
+      }
+    ],
+    "go_memstats_stack_inuse_bytes": [
+      {
+        "metric": {
+          "__name__": "go_memstats_stack_inuse_bytes"
+        },
+        "value": [
+          0,
+          "1376256"
+        ]
+      }
+    ],
+    "go_memstats_stack_sys_bytes": [
+      {
+        "metric": {
+          "__name__": "go_memstats_stack_sys_bytes"
+        },
+        "value": [
+          0,
+          "1376256"
+        ]
+      }
+    ],
+    "go_memstats_sys_bytes": [
+      {
+        "metric": {
+          "__name__": "go_memstats_sys_bytes"
+        },
+        "value": [
+          0,
+          "42436856"
+        ]
+      }
+    ],
+    "go_threads": [
+      {
+        "metric": {
+          "__name__": "go_threads"
+        },
+        "value": [
+          0,
+          "13"
+        ]
+      }
+    ],
+    "http_request_duration_microseconds": [
+      {
+        "metric": {
+          "__name__": "http_request_duration_microseconds",
+          "handler": "prometheus",
+          "quantile": "0.5"
+        },
+        "value": [
+          0,
+          "1963.49"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "http_request_duration_microseconds",
+          "handler": "prometheus",
+          "quantile": "0.9"
+        },
+        "value": [
+          0,
+          "2951.74"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "http_request_duration_microseconds",
+          "handler": "prometheus",
+          "quantile": "0.99"
+        },
+        "value": [
+          0,
+          "2951.74"
+        ]
+      }
+    ],
+    "http_request_duration_microseconds_count": [
+      {
+        "metric": {
+          "__name__": "http_request_duration_microseconds_count",
+          "handler": "prometheus"
+        },
+        "value": [
+          0,
+          "3"
+        ]
+      }
+    ],
+    "http_request_duration_microseconds_sum": [
+      {
+        "metric": {
+          "__name__": "http_request_duration_microseconds_sum",
+          "handler": "prometheus"
+        },
+        "value": [
+          0,
+          "16368.774"
+        ]
+      }
+    ],
+    "http_request_size_bytes": [
+      {
+        "metric": {
+          "__name__": "http_request_size_bytes",
+          "handler": "prometheus",
+          "quantile": "0.5"
+        },
+        "value": [
+          0,
+          "285"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "http_request_size_bytes",
+          "handler": "prometheus",
+          "quantile": "0.9"
+        },
+        "value": [
+          0,
+          "285"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "http_request_size_bytes",
+          "handler": "prometheus",
+          "quantile": "0.99"
+        },
+        "value": [
+          0,
+          "285"
+        ]
+      }
+    ],
+    "http_request_size_bytes_count": [
+      {
+        "metric": {
+          "__name__": "http_request_size_bytes_count",
+          "handler": "prometheus"
+        },
+        "value": [
+          0,
+          "3"
+        ]
+      }
+    ],
+    "http_request_size_bytes_sum": [
+      {
+        "metric": {
+          "__name__": "http_request_size_bytes_sum",
+          "handler": "prometheus"
+        },
+        "value": [
+          0,
+          "855"
+        ]
+      }
+    ],
+    "http_requests_total": [
+      {
+        "metric": {
+          "__name__": "http_requests_total",
+          "code": "200",
+          "handler": "prometheus",
+          "method": "get"
+        },
+        "value": [
+          0,
+          "3"
+        ]
+      }
+    ],
+    "http_response_size_bytes": [
+      {
+        "metric": {
+          "__name__": "http_response_size_bytes",
+          "handler": "prometheus",
+          "quantile": "0.5"
+        },
+        "value": [
+          0,
+          "3280"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "http_response_size_bytes",
+          "handler": "prometheus",
+          "quantile": "0.9"
+        },
+        "value": [
+          0,
+          "3317"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "http_response_size_bytes",
+          "handler": "prometheus",
+          "quantile": "0.99"
+        },
+        "value": [
+          0,
+          "3317"
+        ]
+      }
+    ],
+    "http_response_size_bytes_count": [
+      {
+        "metric": {
+          "__name__": "http_response_size_bytes_count",
+          "handler": "prometheus"
+        },
+        "value": [
+          0,
+          "3"
+        ]
+      }
+    ],
+    "http_response_size_bytes_sum": [
+      {
+        "metric": {
+          "__name__": "http_response_size_bytes_sum",
+          "handler": "prometheus"
+        },
+        "value": [
+          0,
+          "9920"
+        ]
+      }
+    ],
+    "kubernetes_build_info": [
+      {
+        "metric": {
+          "__name__": "kubernetes_build_info",
+          "buildDate": "2018-11-26T12:46:57Z",
+          "compiler": "gc",
+          "gitCommit": "435f92c719f279a3a67808c80521ea17d5715c66",
+          "gitTreeState": "clean",
+          "gitVersion": "v1.12.3",
+          "goVersion": "go1.10.4",
+          "major": "1",
+          "minor": "12",
+          "platform": "linux/amd64"
+        },
+        "value": [
+          0,
+          "1"
+        ]
+      }
+    ],
+    "process_cpu_seconds_total": [
+      {
+        "metric": {
+          "__name__": "process_cpu_seconds_total"
+        },
+        "value": [
+          0,
+          "12.79"
+        ]
+      }
+    ],
+    "process_max_fds": [
+      {
+        "metric": {
+          "__name__": "process_max_fds"
+        },
+        "value": [
+          0,
+          "1048576"
+        ]
+      }
+    ],
+    "process_open_fds": [
+      {
+        "metric": {
+          "__name__": "process_open_fds"
+        },
+        "value": [
+          0,
+          "9"
+        ]
+      }
+    ],
+    "process_resident_memory_bytes": [
+      {
+        "metric": {
+          "__name__": "process_resident_memory_bytes"
+        },
+        "value": [
+          0,
+          "52797440"
+        ]
+      }
+    ],
+    "process_start_time_seconds": [
+      {
+        "metric": {
+          "__name__": "process_start_time_seconds"
+        },
+        "value": [
+          0,
+          "1553153977.8"
+        ]
+      }
+    ],
+    "process_virtual_memory_bytes": [
+      {
+        "metric": {
+          "__name__": "process_virtual_memory_bytes"
+        },
+        "value": [
+          0,
+          "76918784"
+        ]
+      }
+    ],
+    "rest_client_request_latency_seconds_bucket": [
+      {
+        "metric": {
+          "__name__": "rest_client_request_latency_seconds_bucket",
+          "le": "0.001",
+          "url": "https://10.21.64.18:6443/%7Bprefix%7D",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "rest_client_request_latency_seconds_bucket",
+          "le": "0.002",
+          "url": "https://10.21.64.18:6443/%7Bprefix%7D",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "95"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "rest_client_request_latency_seconds_bucket",
+          "le": "0.004",
+          "url": "https://10.21.64.18:6443/%7Bprefix%7D",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "127"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "rest_client_request_latency_seconds_bucket",
+          "le": "0.008",
+          "url": "https://10.21.64.18:6443/%7Bprefix%7D",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "139"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "rest_client_request_latency_seconds_bucket",
+          "le": "0.016",
+          "url": "https://10.21.64.18:6443/%7Bprefix%7D",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "144"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "rest_client_request_latency_seconds_bucket",
+          "le": "0.032",
+          "url": "https://10.21.64.18:6443/%7Bprefix%7D",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "144"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "rest_client_request_latency_seconds_bucket",
+          "le": "0.064",
+          "url": "https://10.21.64.18:6443/%7Bprefix%7D",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "145"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "rest_client_request_latency_seconds_bucket",
+          "le": "0.128",
+          "url": "https://10.21.64.18:6443/%7Bprefix%7D",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "145"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "rest_client_request_latency_seconds_bucket",
+          "le": "0.256",
+          "url": "https://10.21.64.18:6443/%7Bprefix%7D",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "145"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "rest_client_request_latency_seconds_bucket",
+          "le": "0.512",
+          "url": "https://10.21.64.18:6443/%7Bprefix%7D",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "145"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "rest_client_request_latency_seconds_bucket",
+          "le": "+Inf",
+          "url": "https://10.21.64.18:6443/%7Bprefix%7D",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "185"
+        ]
+      }
+    ],
+    "rest_client_request_latency_seconds_count": [
+      {
+        "metric": {
+          "__name__": "rest_client_request_latency_seconds_count",
+          "url": "https://10.21.64.18:6443/%7Bprefix%7D",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "185"
+        ]
+      }
+    ],
+    "rest_client_request_latency_seconds_sum": [
+      {
+        "metric": {
+          "__name__": "rest_client_request_latency_seconds_sum",
+          "url": "https://10.21.64.18:6443/%7Bprefix%7D",
+          "verb": "GET"
+        },
+        "value": [
+          0,
+          "481.66038908099995"
+        ]
+      }
+    ],
+    "rest_client_requests_total": [
+      {
+        "metric": {
+          "__name__": "rest_client_requests_total",
+          "code": "200",
+          "host": "10.21.64.18:6443",
+          "method": "GET"
+        },
+        "value": [
+          0,
+          "212"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "rest_client_requests_total",
+          "code": "\u003cerror\u003e",
+          "host": "10.21.64.18:6443",
+          "method": "GET"
+        },
+        "value": [
+          0,
+          "30"
+        ]
+      }
+    ],
+    "scheduler_binding_latency_microseconds_bucket": [
+      {
+        "metric": {
+          "__name__": "scheduler_binding_latency_microseconds_bucket",
+          "le": "1000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_binding_latency_microseconds_bucket",
+          "le": "2000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_binding_latency_microseconds_bucket",
+          "le": "4000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_binding_latency_microseconds_bucket",
+          "le": "8000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_binding_latency_microseconds_bucket",
+          "le": "16000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_binding_latency_microseconds_bucket",
+          "le": "32000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_binding_latency_microseconds_bucket",
+          "le": "64000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_binding_latency_microseconds_bucket",
+          "le": "128000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_binding_latency_microseconds_bucket",
+          "le": "256000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_binding_latency_microseconds_bucket",
+          "le": "512000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_binding_latency_microseconds_bucket",
+          "le": "1.024e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_binding_latency_microseconds_bucket",
+          "le": "2.048e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_binding_latency_microseconds_bucket",
+          "le": "4.096e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_binding_latency_microseconds_bucket",
+          "le": "8.192e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_binding_latency_microseconds_bucket",
+          "le": "1.6384e+07"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_binding_latency_microseconds_bucket",
+          "le": "+Inf"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "scheduler_binding_latency_microseconds_count": [
+      {
+        "metric": {
+          "__name__": "scheduler_binding_latency_microseconds_count"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "scheduler_binding_latency_microseconds_sum": [
+      {
+        "metric": {
+          "__name__": "scheduler_binding_latency_microseconds_sum"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "scheduler_e2e_scheduling_latency_microseconds_bucket": [
+      {
+        "metric": {
+          "__name__": "scheduler_e2e_scheduling_latency_microseconds_bucket",
+          "le": "1000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_e2e_scheduling_latency_microseconds_bucket",
+          "le": "2000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_e2e_scheduling_latency_microseconds_bucket",
+          "le": "4000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_e2e_scheduling_latency_microseconds_bucket",
+          "le": "8000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_e2e_scheduling_latency_microseconds_bucket",
+          "le": "16000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_e2e_scheduling_latency_microseconds_bucket",
+          "le": "32000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_e2e_scheduling_latency_microseconds_bucket",
+          "le": "64000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_e2e_scheduling_latency_microseconds_bucket",
+          "le": "128000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_e2e_scheduling_latency_microseconds_bucket",
+          "le": "256000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_e2e_scheduling_latency_microseconds_bucket",
+          "le": "512000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_e2e_scheduling_latency_microseconds_bucket",
+          "le": "1.024e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_e2e_scheduling_latency_microseconds_bucket",
+          "le": "2.048e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_e2e_scheduling_latency_microseconds_bucket",
+          "le": "4.096e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_e2e_scheduling_latency_microseconds_bucket",
+          "le": "8.192e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_e2e_scheduling_latency_microseconds_bucket",
+          "le": "1.6384e+07"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_e2e_scheduling_latency_microseconds_bucket",
+          "le": "+Inf"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "scheduler_e2e_scheduling_latency_microseconds_count": [
+      {
+        "metric": {
+          "__name__": "scheduler_e2e_scheduling_latency_microseconds_count"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "scheduler_e2e_scheduling_latency_microseconds_sum": [
+      {
+        "metric": {
+          "__name__": "scheduler_e2e_scheduling_latency_microseconds_sum"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "scheduler_equiv_cache_lookups_total": [
+      {
+        "metric": {
+          "__name__": "scheduler_equiv_cache_lookups_total",
+          "result": "hit"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_equiv_cache_lookups_total",
+          "result": "miss"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "scheduler_pod_preemption_victims": [
+      {
+        "metric": {
+          "__name__": "scheduler_pod_preemption_victims"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "scheduler_scheduling_algorithm_latency_microseconds_bucket": [
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_latency_microseconds_bucket",
+          "le": "1000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_latency_microseconds_bucket",
+          "le": "2000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_latency_microseconds_bucket",
+          "le": "4000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_latency_microseconds_bucket",
+          "le": "8000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_latency_microseconds_bucket",
+          "le": "16000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_latency_microseconds_bucket",
+          "le": "32000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_latency_microseconds_bucket",
+          "le": "64000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_latency_microseconds_bucket",
+          "le": "128000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_latency_microseconds_bucket",
+          "le": "256000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_latency_microseconds_bucket",
+          "le": "512000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_latency_microseconds_bucket",
+          "le": "1.024e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_latency_microseconds_bucket",
+          "le": "2.048e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_latency_microseconds_bucket",
+          "le": "4.096e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_latency_microseconds_bucket",
+          "le": "8.192e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_latency_microseconds_bucket",
+          "le": "1.6384e+07"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_latency_microseconds_bucket",
+          "le": "+Inf"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "scheduler_scheduling_algorithm_latency_microseconds_count": [
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_latency_microseconds_count"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "scheduler_scheduling_algorithm_latency_microseconds_sum": [
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_latency_microseconds_sum"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "scheduler_scheduling_algorithm_predicate_evaluation_bucket": [
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_predicate_evaluation_bucket",
+          "le": "1000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_predicate_evaluation_bucket",
+          "le": "2000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_predicate_evaluation_bucket",
+          "le": "4000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_predicate_evaluation_bucket",
+          "le": "8000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_predicate_evaluation_bucket",
+          "le": "16000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_predicate_evaluation_bucket",
+          "le": "32000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_predicate_evaluation_bucket",
+          "le": "64000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_predicate_evaluation_bucket",
+          "le": "128000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_predicate_evaluation_bucket",
+          "le": "256000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_predicate_evaluation_bucket",
+          "le": "512000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_predicate_evaluation_bucket",
+          "le": "1.024e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_predicate_evaluation_bucket",
+          "le": "2.048e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_predicate_evaluation_bucket",
+          "le": "4.096e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_predicate_evaluation_bucket",
+          "le": "8.192e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_predicate_evaluation_bucket",
+          "le": "1.6384e+07"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_predicate_evaluation_bucket",
+          "le": "+Inf"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "scheduler_scheduling_algorithm_predicate_evaluation_count": [
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_predicate_evaluation_count"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "scheduler_scheduling_algorithm_predicate_evaluation_sum": [
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_predicate_evaluation_sum"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "scheduler_scheduling_algorithm_preemption_evaluation_bucket": [
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_preemption_evaluation_bucket",
+          "le": "1000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_preemption_evaluation_bucket",
+          "le": "2000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_preemption_evaluation_bucket",
+          "le": "4000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_preemption_evaluation_bucket",
+          "le": "8000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_preemption_evaluation_bucket",
+          "le": "16000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_preemption_evaluation_bucket",
+          "le": "32000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_preemption_evaluation_bucket",
+          "le": "64000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_preemption_evaluation_bucket",
+          "le": "128000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_preemption_evaluation_bucket",
+          "le": "256000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_preemption_evaluation_bucket",
+          "le": "512000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_preemption_evaluation_bucket",
+          "le": "1.024e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_preemption_evaluation_bucket",
+          "le": "2.048e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_preemption_evaluation_bucket",
+          "le": "4.096e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_preemption_evaluation_bucket",
+          "le": "8.192e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_preemption_evaluation_bucket",
+          "le": "1.6384e+07"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_preemption_evaluation_bucket",
+          "le": "+Inf"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "scheduler_scheduling_algorithm_preemption_evaluation_count": [
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_preemption_evaluation_count"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "scheduler_scheduling_algorithm_preemption_evaluation_sum": [
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_preemption_evaluation_sum"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "scheduler_scheduling_algorithm_priority_evaluation_bucket": [
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_priority_evaluation_bucket",
+          "le": "1000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_priority_evaluation_bucket",
+          "le": "2000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_priority_evaluation_bucket",
+          "le": "4000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_priority_evaluation_bucket",
+          "le": "8000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_priority_evaluation_bucket",
+          "le": "16000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_priority_evaluation_bucket",
+          "le": "32000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_priority_evaluation_bucket",
+          "le": "64000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_priority_evaluation_bucket",
+          "le": "128000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_priority_evaluation_bucket",
+          "le": "256000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_priority_evaluation_bucket",
+          "le": "512000"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_priority_evaluation_bucket",
+          "le": "1.024e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_priority_evaluation_bucket",
+          "le": "2.048e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_priority_evaluation_bucket",
+          "le": "4.096e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_priority_evaluation_bucket",
+          "le": "8.192e+06"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_priority_evaluation_bucket",
+          "le": "1.6384e+07"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_priority_evaluation_bucket",
+          "le": "+Inf"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "scheduler_scheduling_algorithm_priority_evaluation_count": [
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_priority_evaluation_count"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "scheduler_scheduling_algorithm_priority_evaluation_sum": [
+      {
+        "metric": {
+          "__name__": "scheduler_scheduling_algorithm_priority_evaluation_sum"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ],
+    "scheduler_total_preemption_attempts": [
+      {
+        "metric": {
+          "__name__": "scheduler_total_preemption_attempts"
+        },
+        "value": [
+          0,
+          "0"
+        ]
+      }
+    ]
+  },
+  "ClusterAutoscalerMetrics": null
+}
