@@ -33,7 +33,6 @@ import (
 	"k8s.io/perf-tests/clusterloader2/pkg/flags"
 	"k8s.io/perf-tests/clusterloader2/pkg/framework"
 	"k8s.io/perf-tests/clusterloader2/pkg/prometheus"
-	"k8s.io/perf-tests/clusterloader2/pkg/test"
 	"k8s.io/perf-tests/clusterloader2/pkg/util"
 
 	_ "k8s.io/perf-tests/clusterloader2/pkg/measurement/common/bundle"
@@ -244,26 +243,27 @@ func main() {
 	junitReporter := ginkgoreporters.NewJUnitReporter(path.Join(clusterLoaderConfig.ReportDir, "junit.xml"))
 	junitReporter.SpecSuiteWillBegin(ginkgoconfig.GinkgoConfig, suiteSummary)
 	testsStart := time.Now()
-	for _, clusterLoaderConfig.TestConfigPath = range testConfigPaths {
-		testStart := time.Now()
-		specSummary := &ginkgotypes.SpecSummary{
-			ComponentTexts: []string{suiteSummary.SuiteDescription, clusterLoaderConfig.TestConfigPath},
-		}
-		printTestStart(clusterLoaderConfig.TestConfigPath)
-		if errList := test.RunTest(f, prometheusFramework, &clusterLoaderConfig); !errList.IsEmpty() {
-			suiteSummary.NumberOfFailedSpecs++
-			specSummary.State = ginkgotypes.SpecStateFailed
-			specSummary.Failure = ginkgotypes.SpecFailure{
-				Message: errList.String(),
-			}
-			printTestResult(clusterLoaderConfig.TestConfigPath, "Fail", errList.String())
-		} else {
-			specSummary.State = ginkgotypes.SpecStatePassed
-			printTestResult(clusterLoaderConfig.TestConfigPath, "Success", "")
-		}
-		specSummary.RunTime = time.Since(testStart)
-		junitReporter.SpecDidComplete(specSummary)
-	}
+	klog.Info("---------------------------statrt")
+	// for _, clusterLoaderConfig.TestConfigPath = range testConfigPaths {
+	// 	testStart := time.Now()
+	// 	specSummary := &ginkgotypes.SpecSummary{
+	// 		ComponentTexts: []string{suiteSummary.SuiteDescription, clusterLoaderConfig.TestConfigPath},
+	// 	}
+	// 	printTestStart(clusterLoaderConfig.TestConfigPath)
+	// 	if errList := test.RunTest(f, prometheusFramework, &clusterLoaderConfig); !errList.IsEmpty() {
+	// 		suiteSummary.NumberOfFailedSpecs++
+	// 		specSummary.State = ginkgotypes.SpecStateFailed
+	// 		specSummary.Failure = ginkgotypes.SpecFailure{
+	// 			Message: errList.String(),
+	// 		}
+	// 		printTestResult(clusterLoaderConfig.TestConfigPath, "Fail", errList.String())
+	// 	} else {
+	// 		specSummary.State = ginkgotypes.SpecStatePassed
+	// 		printTestResult(clusterLoaderConfig.TestConfigPath, "Success", "")
+	// 	}
+	// 	specSummary.RunTime = time.Since(testStart)
+	// 	junitReporter.SpecDidComplete(specSummary)
+	// }
 	suiteSummary.RunTime = time.Since(testsStart)
 	junitReporter.SpecSuiteDidEnd(suiteSummary)
 

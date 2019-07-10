@@ -26,7 +26,8 @@ func IsMasterNode(nodeName string) bool {
 	// However, using regexp.MatchString() results even in more than 35%
 	// of all space allocations in ControllerManager spent in this function.
 	// That's why we are trying to be a bit smarter.
-	if strings.HasSuffix(nodeName, "master") {
+	if strings.HasSuffix(nodeName, "master") ||
+		strings.HasPrefix(nodeName, "master") {
 		return true
 	}
 	if len(nodeName) >= 10 {
