@@ -244,10 +244,6 @@ func main() {
 	junitReporter := ginkgoreporters.NewJUnitReporter(path.Join(clusterLoaderConfig.ReportDir, "junit.xml"))
 	junitReporter.SpecSuiteWillBegin(ginkgoconfig.GinkgoConfig, suiteSummary)
 	testsStart := time.Now()
-	klog.Info("---------------------------statrt")
-	testConfigPaths = []string{}
-	klog.Info("---------------------------end")
-
 	for _, clusterLoaderConfig.TestConfigPath = range testConfigPaths {
 		testStart := time.Now()
 		specSummary := &ginkgotypes.SpecSummary{
