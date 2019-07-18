@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <testsuite name="ClusterLoaderV2" tests="1" failures="1" errors="0" time="4071.867">
+      <testcase name="./testing/load/config.yaml" classname="ClusterLoaderV2" time="4071.867726852">
+          <failure type="Failure">:0&#xA;[measurement call WaitForControlledPodsRunning - WaitForRunningRCs error: 6 objects timed out: Deployments: test-4a86ei-3/small-rc-64, test-4a86ei-5/small-rc-36, test-4a86ei-2/small-rc-104, test-4a86ei-3/small-rc-197, test-4a86ei-6/small-rc-100, test-4a86ei-2/small-rc-174&#xA;measurement call WaitForControlledPodsRunning - WaitForRunningRCs error: 2 objects timed out: Deployments: test-4a86ei-3/small-rc-64, test-4a86ei-6/small-rc-100&#xA;measurement call TestMetrics - TestMetrics error: [text format parsing error in line 1: invalid metric name]]&#xA;:0</failure>
+      </testcase>
+  </testsuite>
