@@ -17,6 +17,7 @@ limitations under the License.
 package system
 
 import (
+	"os"
 	"strings"
 )
 
@@ -27,6 +28,9 @@ func IsMasterNode(nodeName string) bool {
 	// of all space allocations in ControllerManager spent in this function.
 	// That's why we are trying to be a bit smarter.
 	if strings.HasSuffix(nodeName, "master") {
+		return true
+	}
+	if os.Getenv("MasterName") == nodeName {
 		return true
 	}
 	if len(nodeName) >= 10 {
